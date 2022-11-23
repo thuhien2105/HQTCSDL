@@ -16,3 +16,9 @@ D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.pdb
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.genruntimeconfig.cache
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\ref\HeQuanTri.dll
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form2.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form3.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form4.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form5.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form6.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form7.resources
