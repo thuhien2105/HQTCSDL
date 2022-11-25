@@ -24,3 +24,6 @@ D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form7.resources
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form8.resources
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form9.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.GiaoDienTX.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.DangKy.resources
+D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.DSDonHang.resources
