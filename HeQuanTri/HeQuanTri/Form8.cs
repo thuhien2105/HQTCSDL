@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace HeQuanTri
 {
-    public partial class Form3 : Form
+    public partial class Form8 : Form
     {
-        public Form3()
+        public Form8()
         {
             InitializeComponent();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form8_Load(object sender, EventArgs e)
         {
 
         }
