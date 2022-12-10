@@ -27,3 +27,33 @@ D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.GiaoDienTX.resources
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.DangKy.resources
 D:\Study\HOC KY 1 - HTTT2022\HQT-CSDL\Giao diện\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.DSDonHang.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\bin\Debug\net6.0-windows\HeQuanTri.exe
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\bin\Debug\net6.0-windows\HeQuanTri.dll.config
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\bin\Debug\net6.0-windows\HeQuanTri.deps.json
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\bin\Debug\net6.0-windows\HeQuanTri.runtimeconfig.json
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\bin\Debug\net6.0-windows\HeQuanTri.dll
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\bin\Debug\net6.0-windows\HeQuanTri.pdb
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.csproj.AssemblyReference.cache
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.DangKy.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.DSDonHang.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.dangnhap.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form2.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form3.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form4.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form5.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form6.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form7.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form8.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Form9.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.GiaoDienTX.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.Properties.Resources.resources
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.csproj.GenerateResource.cache
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.GeneratedMSBuildEditorConfig.editorconfig
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.AssemblyInfoInputs.cache
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.AssemblyInfo.cs
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.csproj.CoreCompileInputs.cache
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.dll
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\refint\HeQuanTri.dll
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.pdb
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\HeQuanTri.genruntimeconfig.cache
+D:\20127021\HQTCSDL\HeQuanTri\HeQuanTri\obj\Debug\net6.0-windows\ref\HeQuanTri.dll
