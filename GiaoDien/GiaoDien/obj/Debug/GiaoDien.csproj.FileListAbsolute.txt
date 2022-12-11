@@ -9,3 +9,20 @@ D:\Study\HOC KY 1 - HTTT2022\CSDLNC\CSDLNC-Nhom10\GiaoDien\GiaoDien\obj\Debug\Gi
 D:\Study\HOC KY 1 - HTTT2022\CSDLNC\CSDLNC-Nhom10\GiaoDien\GiaoDien\obj\Debug\GiaoDien.exe
 D:\Study\HOC KY 1 - HTTT2022\CSDLNC\CSDLNC-Nhom10\GiaoDien\GiaoDien\obj\Debug\GiaoDien.pdb
 D:\Study\HOC KY 1 - HTTT2022\CSDLNC\CSDLNC-Nhom10\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form1.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\GiaoDien.exe.config
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\GiaoDien.exe
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\GiaoDien.pdb
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.AssemblyReference.cache
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.SuggestedBindingRedirects.cache
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form1.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Properties.Resources.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.GenerateResource.cache
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.CoreCompileInputs.cache
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.exe
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.pdb
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\Microsoft.SqlServer.Server.dll
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\System.Data.SqlClient.dll
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\Microsoft.SqlServer.Server.pdb
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\Microsoft.SqlServer.Server.xml
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\bin\Debug\System.Data.SqlClient.xml
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.CopyComplete

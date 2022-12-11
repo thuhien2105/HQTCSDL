@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HeQuanTri",
-    "\\HeQuanTri\\HeQuanTri"
+    "\\GiaoDien",
+    "\\GiaoDien\\GiaoDien",
+    "\\GiaoDien\\GiaoDien\\obj",
+    "\\GiaoDien\\packages"
   ],
-  "SelectedNode": "\\HeQuanTri\\HeQuanTri\\Form1.cs",
+  "SelectedNode": "\\GiaoDien\\GiaoDien\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
