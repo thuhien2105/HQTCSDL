@@ -14,6 +14,5 @@ Hệ thống đặt và giao thức ăn online
 8- Thay đổi địa chỉ giao hàng
 9- Xem chi tiết đơn đặt hàng
 
-10->11 tài xế
-10- Đăng nhập
-11- Xem danh sách đơn hàng & Hủy đơn (gộp chung 2 chức năng)
+10 tài xế
+10- Xem danh sách đơn hàng & Hủy đơn (gộp chung 2 chức năng)
