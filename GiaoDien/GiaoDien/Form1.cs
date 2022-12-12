@@ -43,7 +43,7 @@ namespace GiaoDien
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
             //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
-            String sql = "SELECT * FROM [TAI KHOAN] where tentaikhoan='"+ tendangnhap +"'";
+            String sql = "exec sp_login '"+tendangnhap+"','"+matkhau+"'";
             //Bước 3: Tạo đối tượng thực thi câu lệnh
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
@@ -52,11 +52,14 @@ namespace GiaoDien
             if (reader.Read())
             {
                 MessageBox.Show("Đăng nhập thành công");
-                //string id = reader["Loai tai khoan"].ToString();
-                //Form2 form2 = new Form2();
-                //form2.id_f2 = id;
-                //form2.Show();
-                this.Hide();
+                string loaitaikhoan = reader["loaitaikhoan"].ToString();
+                if (loaitaikhoan=="Khach hang")
+                {
+                    Form2 form2 = new Form2();
+                    //form2.id_f2 = id;
+                    form2.Show();
+                    this.Hide();
+                }
             }
             else
                 MessageBox.Show("Not found !!!");

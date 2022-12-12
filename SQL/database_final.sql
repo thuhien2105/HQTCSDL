@@ -152,6 +152,7 @@ go
 create table "TAI KHOAN" (
    tentaikhoan          nvarchar(50)             not null,
    matkhau              char(20)                 not null,     
+   loaitaikhoan nvarchar(50),
    constraint "PK_TAI KHOAN" primary key (tentaikhoan)
 )
 go
@@ -266,7 +267,7 @@ alter table "TAI XE"
       references "TAI KHOAN NGAN HANG" ("Ten Ngan hang", "So tai khoan")
 go
 alter table "CHI NHANH"
-   add constraint "FK_TAI XE_CÓ_TAI KHOA" foreign key ("Ten Ngan hang", "So tai khoan")
+   add constraint "FK_CHI NHANH_CÓ_TAI KHOA" foreign key ("Ten Ngan hang", "So tai khoan")
       references "TAI KHOAN NGAN HANG" ("Ten Ngan hang", "So tai khoan")
 go
 alter table "TAI XE"
@@ -287,20 +288,12 @@ alter table "TAI XE"
       references "NHAN VIEN" (id_nhanvien)
 go
 
-alter table "TINH TRANG CHI NHANH"
-   add constraint "FK_TINH TRA_CUA_CHI NHAN" foreign key (id_chinhanh)
-      references "CHI NHANH" (id_chinhanh)
-go
 
 alter table "DOI TAC"
    add constraint "FK_TAI KHOAN NGAN HANG_DOI TAC" foreign key ("Ten ngan hang", "So tai khoan")
       references "TAI KHOAN NGAN HANG" ("Ten ngan hang", "So tai khoan")
 go 
 
-alter table "THUC DON"
-   add constraint "FK_THUC DON_MON AN" foreign key ("Ten mon")
-      references "MON AN"("Ten mon")
-go 
 alter table "THUC DON" 
    add constraint "FK_THUC DON_DOI TAC" foreign key ("Ma doi tac")
       references "DOI TAC"("Ma doi tac")
@@ -311,6 +304,6 @@ alter table "THUC DON"
       references "LOAI AM THUC"(id_amthuc) 
 go 
 alter table "DON HANG" 
-   add constraint "FK_THUC DON_LOAI AM THUC" foreign key (id_khuvuc)
+   add constraint "FK_DON HANG_KHU VUC" foreign key (id_khuvuc)
       references "KHU VUC"(id_khuvuc) 
 go 

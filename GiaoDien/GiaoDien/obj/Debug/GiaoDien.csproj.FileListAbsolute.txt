@@ -80,3 +80,15 @@ C:\Users\DELL\Desktop\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.CoreCo
 C:\Users\DELL\Desktop\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.CopyComplete
 C:\Users\DELL\Desktop\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.exe
 C:\Users\DELL\Desktop\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.pdb
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form10.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form11.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form17.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form18.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form2.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form3.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form4.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form5.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form6.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form7.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form8.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form9.resources
