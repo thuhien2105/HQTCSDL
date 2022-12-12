@@ -48,10 +48,9 @@ namespace GiaoDien
             // 
             this.lblTenDangNhap.AutoSize = true;
             this.lblTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDangNhap.Location = new System.Drawing.Point(322, 265);
-            this.lblTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTenDangNhap.Location = new System.Drawing.Point(215, 172);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
-            this.lblTenDangNhap.Size = new System.Drawing.Size(175, 29);
+            this.lblTenDangNhap.Size = new System.Drawing.Size(105, 18);
             this.lblTenDangNhap.TabIndex = 0;
             this.lblTenDangNhap.Text = "Tên đăng nhập";
             this.lblTenDangNhap.Click += new System.EventHandler(this.label5_Click);
@@ -61,30 +60,27 @@ namespace GiaoDien
             this.lblMatKhau.AutoSize = true;
             this.lblMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatKhau.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblMatKhau.Location = new System.Drawing.Point(322, 320);
-            this.lblMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMatKhau.Location = new System.Drawing.Point(215, 208);
             this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(109, 29);
+            this.lblMatKhau.Size = new System.Drawing.Size(69, 18);
             this.lblMatKhau.TabIndex = 1;
             this.lblMatKhau.Text = "Mật khẩu";
             this.lblMatKhau.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(526, 265);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(351, 172);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(331, 26);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(222, 20);
             this.txtTenDangNhap.TabIndex = 2;
             this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(526, 320);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMatKhau.Location = new System.Drawing.Point(351, 208);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '•';
-            this.txtMatKhau.Size = new System.Drawing.Size(331, 26);
+            this.txtMatKhau.Size = new System.Drawing.Size(222, 20);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
             // 
@@ -95,10 +91,9 @@ namespace GiaoDien
             this.btnTiepTuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTiepTuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTiepTuc.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnTiepTuc.Location = new System.Drawing.Point(327, 378);
-            this.btnTiepTuc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTiepTuc.Location = new System.Drawing.Point(218, 246);
             this.btnTiepTuc.Name = "btnTiepTuc";
-            this.btnTiepTuc.Size = new System.Drawing.Size(532, 43);
+            this.btnTiepTuc.Size = new System.Drawing.Size(355, 28);
             this.btnTiepTuc.TabIndex = 4;
             this.btnTiepTuc.Text = "Tiếp tục";
             this.btnTiepTuc.UseVisualStyleBackColor = false;
@@ -108,10 +103,9 @@ namespace GiaoDien
             // 
             this.lblHoac.AutoSize = true;
             this.lblHoac.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblHoac.Location = new System.Drawing.Point(562, 469);
-            this.lblHoac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHoac.Location = new System.Drawing.Point(375, 305);
             this.lblHoac.Name = "lblHoac";
-            this.lblHoac.Size = new System.Drawing.Size(55, 20);
+            this.lblHoac.Size = new System.Drawing.Size(37, 13);
             this.lblHoac.TabIndex = 5;
             this.lblHoac.Text = "HOẶC";
             this.lblHoac.Click += new System.EventHandler(this.label7_Click);
@@ -120,10 +114,9 @@ namespace GiaoDien
             // 
             this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(435, 534);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDangKy.Location = new System.Drawing.Point(290, 347);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(150, 51);
+            this.btnDangKy.Size = new System.Drawing.Size(100, 33);
             this.btnDangKy.TabIndex = 6;
             this.btnDangKy.Text = "Đăng Ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
@@ -133,10 +126,9 @@ namespace GiaoDien
             // 
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(603, 534);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThoat.Location = new System.Drawing.Point(402, 347);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(150, 51);
+            this.btnThoat.Size = new System.Drawing.Size(100, 33);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -146,10 +138,9 @@ namespace GiaoDien
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(272, 638);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(181, 415);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(617, 40);
+            this.label8.Size = new System.Drawing.Size(430, 26);
             this.label8.TabIndex = 8;
             this.label8.Text = "                Chúng tôi không sử dụng thông tin của bạn với bất kỳ mục đích nào" +
     "\r\nBằng cách đăng nhập hoặc đăng ký, bạn đồng ý với Chính sách quy định của chúng" +
@@ -158,20 +149,19 @@ namespace GiaoDien
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(512, 71);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(341, 46);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 137);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 89);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnThoat);
@@ -183,9 +173,8 @@ namespace GiaoDien
             this.Controls.Add(this.lblMatKhau);
             this.Controls.Add(this.lblTenDangNhap);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ĐĂNG NHẬP/ ĐĂNG KÝ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
