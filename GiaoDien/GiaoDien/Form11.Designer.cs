@@ -38,7 +38,6 @@
             this.quảnLíDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLíToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLíThựcĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             this.quảnLíToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(739, 30);
+            this.menuStrip2.Size = new System.Drawing.Size(739, 28);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -87,30 +87,20 @@
             // quảnLíDToolStripMenuItem
             // 
             this.quảnLíDToolStripMenuItem.Name = "quảnLíDToolStripMenuItem";
-            this.quảnLíDToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLíDToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.quảnLíDToolStripMenuItem.Text = "Quản lí doanh thu";
             // 
             // quảnLíToolStripMenuItem1
             // 
             this.quảnLíToolStripMenuItem1.Name = "quảnLíToolStripMenuItem1";
-            this.quảnLíToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.quảnLíToolStripMenuItem1.Size = new System.Drawing.Size(210, 26);
             this.quảnLíToolStripMenuItem1.Text = "Quản lí chi nhánh";
             // 
             // quảnLíThựcĐơnToolStripMenuItem
             // 
             this.quảnLíThựcĐơnToolStripMenuItem.Name = "quảnLíThựcĐơnToolStripMenuItem";
-            this.quảnLíThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLíThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.quảnLíThựcĐơnToolStripMenuItem.Text = "Quản lí thực đơn";
-            // 
-            // pictureBox1
-            // 
-            //this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(575, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -183,14 +173,24 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Số tài khoản";
             // 
-            // Doitac
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(500, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 158);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Form11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            //this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(739, 399);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -198,10 +198,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip2);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "Doitac";
+            this.Name = "Form11";
             this.RightToLeftLayout = true;
             this.Text = "Đối Tác";
             this.menuStrip2.ResumeLayout(false);
@@ -222,7 +221,6 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLíDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLíToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem quảnLíThựcĐơnToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -230,5 +228,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -52,3 +52,4 @@ C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\Gia
 C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.csproj.CopyComplete
 C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.exe
 C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.pdb
+C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form11.resources

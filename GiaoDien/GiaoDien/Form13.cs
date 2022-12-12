@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GiaoDien
 {
-    public partial class Form11 : Form
+    public partial class Form13 : Form
     {
-        public Form11()
+        public Form13()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
