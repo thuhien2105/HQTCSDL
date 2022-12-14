@@ -30,7 +30,9 @@ namespace GiaoDien
 
         private void btnTatCaCuaHang_click(object sender, EventArgs e)
         {
-          
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Hide();
         }
     }
 }
