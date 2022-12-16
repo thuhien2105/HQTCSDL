@@ -20,18 +20,39 @@ namespace GiaoDien
         {
             InitializeComponent();
             connectionString = @"Data Source=MSI\HIENTHU;Initial Catalog=DOAN;Integrated Security=True";
+            dataGridView1.AutoGenerateColumns = false;
+
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataAdapter adapter = new SqlDataAdapter("exec sp_dsquan", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("select * from [DOI TAC]", connection);
             DataTable table = new DataTable();
             adapter.Fill(table);
-            dataGridView1.DataSource = table;
-            dataGridView1.AutoGenerateColumns = false;
-        }
-    }
+            cbbTimKiemCuaHang.ValueMember = "Ma doi tac";
+            cbbTimKiemCuaHang.DisplayMember = "Ten quan";
+            cbbTimKiemCuaHang.DataSource = table;
+            cbbTimKiemCuaHang.SelectedIndex = -1;
 
-        
+
+            //setGridViewEditable(false);
+
+            dataGridView1.DataSource = table;
+
+        }
+
+        private void btnTimKiemCuahang_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 form4 = new Form4();
+            DataRowView row = (DataRowView)cbbTimKiemCuaHang.SelectedItem;
+            form4.tenquan = (String)row.Row["Ten quan"];
+            form4.id_doitac = (String)row.Row["Ma doi tac"];
+            form4.Show();
+
+        }
+
+       
+    }
 }

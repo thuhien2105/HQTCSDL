@@ -32,22 +32,21 @@ namespace GiaoDien
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTimKiemCuahang = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.dOANDataSet = new GiaoDien.DOANDataSet();
             this.dOITACBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOI_TACTableAdapter = new GiaoDien.DOANDataSetTableAdapters.DOI_TACTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhPhoQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongChiNhanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soDienThoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.cbbTimKiemCuaHang = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet)).BeginInit();
@@ -55,14 +54,6 @@ namespace GiaoDien
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(268, 169);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(518, 26);
-            this.textBox1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -86,16 +77,17 @@ namespace GiaoDien
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // btnTimKiemCuahang
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.button1.Location = new System.Drawing.Point(372, 220);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(243, 45);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tìm kiếm cửa hàng";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTimKiemCuahang.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnTimKiemCuahang.Location = new System.Drawing.Point(372, 220);
+            this.btnTimKiemCuahang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTimKiemCuahang.Name = "btnTimKiemCuahang";
+            this.btnTimKiemCuahang.Size = new System.Drawing.Size(243, 45);
+            this.btnTimKiemCuahang.TabIndex = 3;
+            this.btnTimKiemCuahang.Text = "Tìm kiếm cửa hàng";
+            this.btnTimKiemCuahang.UseVisualStyleBackColor = true;
+            this.btnTimKiemCuahang.Click += new System.EventHandler(this.btnTimKiemCuahang_Click);
             // 
             // vScrollBar1
             // 
@@ -124,7 +116,6 @@ namespace GiaoDien
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.emailDataGridViewTextBoxColumn,
             this.tenQuanDataGridViewTextBoxColumn,
             this.thanhPhoQuanDataGridViewTextBoxColumn,
             this.soLuongChiNhanhDataGridViewTextBoxColumn,
@@ -135,17 +126,8 @@ namespace GiaoDien
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(964, 267);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 267);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 150;
             // 
             // tenQuanDataGridViewTextBoxColumn
             // 
@@ -201,19 +183,27 @@ namespace GiaoDien
             this.fillByToolStripButton.Size = new System.Drawing.Size(56, 29);
             this.fillByToolStripButton.Text = "FillBy";
             // 
+            // cbbTimKiemCuaHang
+            // 
+            this.cbbTimKiemCuaHang.FormattingEnabled = true;
+            this.cbbTimKiemCuaHang.Location = new System.Drawing.Point(279, 169);
+            this.cbbTimKiemCuaHang.Name = "cbbTimKiemCuaHang";
+            this.cbbTimKiemCuaHang.Size = new System.Drawing.Size(492, 28);
+            this.cbbTimKiemCuaHang.TabIndex = 7;
+            
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1049, 698);
+            this.Controls.Add(this.cbbTimKiemCuaHang);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTimKiemCuahang);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form3";
@@ -232,21 +222,20 @@ namespace GiaoDien
         }
 
         #endregion
-        private TextBox textBox1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private Button button1;
+        private Button btnTimKiemCuahang;
         private VScrollBar vScrollBar1;
         private DOANDataSet dOANDataSet;
         private BindingSource dOITACBindingSource;
         private DOANDataSetTableAdapters.DOI_TACTableAdapter dOI_TACTableAdapter;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private ToolStrip fillByToolStrip;
+        private ToolStripButton fillByToolStripButton;
         private DataGridViewTextBoxColumn tenQuanDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn thanhPhoQuanDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn soLuongChiNhanhDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn soDienThoaiDataGridViewTextBoxColumn;
-        private ToolStrip fillByToolStrip;
-        private ToolStripButton fillByToolStripButton;
+        private ComboBox cbbTimKiemCuaHang;
     }
 }
