@@ -23,3 +23,6 @@ Hệ thống đặt và giao thức ăn online
 14 Quản lí chi nhánh 
 15 Quản lí Thực đơn
 16 tủy chỉnh thực đơn 
+
+
+Tình trạng đơn hàng:Chờ nhận,(Hủy đơn), Tiếp nhận/Xử lý, Tài xế đã nhận đơn hàng, Tài xế đã tới quán ăn, Tài xế đã nhận món ăn, Tài xế đã tới nơi, Giao hàng thành công. 
