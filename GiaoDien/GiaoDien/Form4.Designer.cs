@@ -47,6 +47,8 @@ namespace GiaoDien
             this.lblGia = new System.Windows.Forms.Label();
             this.btnChonMonAn = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.lblTongDonHang = new System.Windows.Forms.Label();
+            this.lblTong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +77,7 @@ namespace GiaoDien
             // btnDongY
             // 
             this.btnDongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDongY.Location = new System.Drawing.Point(478, 408);
+            this.btnDongY.Location = new System.Drawing.Point(462, 369);
             this.btnDongY.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(104, 32);
@@ -137,7 +139,7 @@ namespace GiaoDien
             // 
             // numSoLuong
             // 
-            this.numSoLuong.Location = new System.Drawing.Point(678, 323);
+            this.numSoLuong.Location = new System.Drawing.Point(507, 285);
             this.numSoLuong.Name = "numSoLuong";
             this.numSoLuong.Size = new System.Drawing.Size(120, 26);
             this.numSoLuong.TabIndex = 35;
@@ -150,11 +152,12 @@ namespace GiaoDien
             this.btnDatDonHang.TabIndex = 36;
             this.btnDatDonHang.Text = "ĐẶT ĐƠN HÀNG";
             this.btnDatDonHang.UseVisualStyleBackColor = true;
+            this.btnDatDonHang.Click += new System.EventHandler(this.btnDatDonHang_Click);
             // 
             // lblMieuTa
             // 
             this.lblMieuTa.AutoSize = true;
-            this.lblMieuTa.Location = new System.Drawing.Point(273, 321);
+            this.lblMieuTa.Location = new System.Drawing.Point(300, 265);
             this.lblMieuTa.Name = "lblMieuTa";
             this.lblMieuTa.Size = new System.Drawing.Size(61, 20);
             this.lblMieuTa.TabIndex = 37;
@@ -163,7 +166,7 @@ namespace GiaoDien
             // lblGia
             // 
             this.lblGia.AutoSize = true;
-            this.lblGia.Location = new System.Drawing.Point(507, 323);
+            this.lblGia.Location = new System.Drawing.Point(300, 314);
             this.lblGia.Name = "lblGia";
             this.lblGia.Size = new System.Drawing.Size(34, 20);
             this.lblGia.TabIndex = 38;
@@ -187,6 +190,25 @@ namespace GiaoDien
             this.btnHuy.TabIndex = 40;
             this.btnHuy.Text = "HỦY";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // lblTongDonHang
+            // 
+            this.lblTongDonHang.AutoSize = true;
+            this.lblTongDonHang.Location = new System.Drawing.Point(783, 291);
+            this.lblTongDonHang.Name = "lblTongDonHang";
+            this.lblTongDonHang.Size = new System.Drawing.Size(124, 20);
+            this.lblTongDonHang.TabIndex = 41;
+            this.lblTongDonHang.Text = "Tổng đơn hàng: ";
+            // 
+            // lblTong
+            // 
+            this.lblTong.AutoSize = true;
+            this.lblTong.Location = new System.Drawing.Point(458, 435);
+            this.lblTong.Name = "lblTong";
+            this.lblTong.Size = new System.Drawing.Size(116, 20);
+            this.lblTong.TabIndex = 42;
+            this.lblTong.Text = "Tổng đơn hàng";
             // 
             // Form4
             // 
@@ -194,6 +216,8 @@ namespace GiaoDien
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1026, 600);
+            this.Controls.Add(this.lblTong);
+            this.Controls.Add(this.lblTongDonHang);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnChonMonAn);
             this.Controls.Add(this.lblGia);
@@ -236,5 +260,7 @@ namespace GiaoDien
         private Label lblGia;
         private Button btnChonMonAn;
         private Button btnHuy;
+        private Label lblTongDonHang;
+        private Label lblTong;
     }
 }

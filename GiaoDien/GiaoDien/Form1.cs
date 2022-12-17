@@ -6,6 +6,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -51,15 +52,19 @@ namespace GiaoDien
             SqlDataReader reader = _command.ExecuteReader();
             if (reader.Read())
             {
-                MessageBox.Show("Đăng nhập thành công");
                 string loaitaikhoan = reader["loaitaikhoan"].ToString();
                 if (loaitaikhoan=="Khach hang")
                 {
+                    //lay id_khachhang
+                    String id_khachhang= reader["MaKH"].ToString();
+                    //vao form trang chu cua khach hang
                     Form2 form2 = new Form2();
+                    form2.id_khachhang= id_khachhang;
                     //form2.id_f2 = id;
                     form2.Show();
                     this.Hide();
                 }
+                MessageBox.Show("Đăng nhập thành công");
             }
             else
                 MessageBox.Show("Not found !!!");

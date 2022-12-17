@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,10 @@ namespace GiaoDien
         public string id_doitac;
         public string id_chinhanh;
         public string tenmon;
+        public String soluong;
+        public String id_donhang;
+        public String id_khachhang;
+        //public int tongtien = 0;
         private void Form4_Load(object sender, EventArgs e)
         {
             lblTenQuan.Text = tenquan;
@@ -41,7 +46,7 @@ namespace GiaoDien
             cbbChiNhanh.DataSource = table;
             cbbChiNhanh.SelectedIndex = -1;
 
-
+           
         }
 
         private void btnChonChiNhanh_Click(object sender, EventArgs e)
@@ -59,11 +64,41 @@ namespace GiaoDien
             //cbbThucDon.DisplayMember = "Gia";
             //cbbThucDon.DisplayMember = "Mieu ta";
             cbbThucDon.SelectedIndex = -1;
+
+
+            _connection = new SqlConnection(connectionString);
+            _connection.Open();
+            String sql = "exec taodonhang '" + id_chinhanh + "','" + id_doitac + "','" + id_khachhang + "'";
+            _command = new SqlCommand(sql, _connection);
+            _command.Connection = _connection;
+            SqlDataReader reader = _command.ExecuteReader();
+            if (reader.Read())
+            {
+                id_donhang = reader["id_donhang"].ToString();
+            }
+            MessageBox.Show(id_donhang);
         }
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            //cbbThucDon.Hide();
+            soluong = numSoLuong.Value.ToString();
+            _connection = new SqlConnection(connectionString);
+            _connection.Open();
+            String sql = "exec taoctdonhang '"+id_donhang+"','"+id_chinhanh+"','"+id_doitac+"',N'"+tenmon+"',"+soluong;
+            _command = new SqlCommand(sql, _connection);
+            _command.Connection = _connection;
+            SqlDataReader reader = _command.ExecuteReader();
+
+            _connection = new SqlConnection(connectionString);
+            _connection.Open();
+            String sql_tong = "exec tinhtongdonhang '" + id_donhang + "'";
+            _command = new SqlCommand(sql_tong, _connection);
+            _command.Connection = _connection;
+            SqlDataReader reader_tong = _command.ExecuteReader();
+            if (reader_tong.Read())
+            {
+                lblTong.Text = "Tổng tiền món ăn: "+ reader_tong["Tong"].ToString();
+            }
         }
 
         private void btnChonMonAn_Click(object sender, EventArgs e)
@@ -87,5 +122,44 @@ namespace GiaoDien
             }
 
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            //Bước 1: Tạo đối tượng kết nối để CSDL & mở kết nối
+            _connection = new SqlConnection(connectionString);
+            _connection.Open();
+            //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
+            String sql = "exec huydonhang '"+id_donhang+"'";
+            //Bước 3: Tạo đối tượng thực thi câu lệnh
+            _command = new SqlCommand(sql, _connection);
+            _command.Connection = _connection;
+            SqlDataReader reader = _command.ExecuteReader();
+
+            Form2 form2= new Form2();
+            form2.Show();
+            this.Close();
+        }
+
+        private void btnDatDonHang_Click(object sender, EventArgs e)
+        {
+            _connection = new SqlConnection(connectionString);
+            _connection.Open();
+            String sql = "exec update_donhang '" + id_donhang + "'";
+            _command = new SqlCommand(sql, _connection);
+            _command.Connection = _connection;
+            SqlDataReader reader = _command.ExecuteReader();
+
+            Form5 form5= new Form5();
+            form5.id_donhang = id_donhang;
+            if (reader.Read())
+            {
+                form5.tongdonhang = reader["Tong don hang"].ToString();
+                form5.phivanchuyen = reader["Phi van chuyen"].ToString();
+            }
+            form5.Show();
+            this.Hide();
+        }
+
+    
     }
 }

@@ -14,6 +14,7 @@ namespace GiaoDien
 {
     public partial class Form2 : Form
     {
+        public String id_khachhang;
         SqlConnection _connection = null;
         SqlCommand _command = null;
         String _connectionString = "";
@@ -31,8 +32,21 @@ namespace GiaoDien
         private void btnTatCaCuaHang_click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3();
+            form3.id_khachhang = id_khachhang;
             form3.Show();
             this.Hide();
+        }
+
+        private void btnLichSuDonHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTheoDoiDonHang_Click(object sender, EventArgs e)
+        {
+            Form6 form6=new Form6();
+            form6.Show();
+
         }
     }
 }

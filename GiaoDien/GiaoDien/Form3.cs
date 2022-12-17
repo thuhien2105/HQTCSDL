@@ -13,6 +13,7 @@ namespace GiaoDien
 {
     public partial class Form3 : Form
     {
+        public String id_khachhang;
         SqlConnection _connection = null;
         SqlCommand _command = null;
         String connectionString = "";
@@ -49,6 +50,7 @@ namespace GiaoDien
             DataRowView row = (DataRowView)cbbTimKiemCuaHang.SelectedItem;
             form4.tenquan = (String)row.Row["Ten quan"];
             form4.id_doitac = (String)row.Row["Ma doi tac"];
+            form4.id_khachhang = id_khachhang;
             form4.Show();
 
         }
