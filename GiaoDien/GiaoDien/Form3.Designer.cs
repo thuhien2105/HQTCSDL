@@ -47,6 +47,7 @@ namespace GiaoDien
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.cbbTimKiemCuaHang = new System.Windows.Forms.ComboBox();
+            this.btnTroVe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet)).BeginInit();
@@ -121,7 +122,7 @@ namespace GiaoDien
             this.soLuongChiNhanhDataGridViewTextBoxColumn,
             this.soDienThoaiDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dOITACBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 309);
+            this.dataGridView1.Location = new System.Drawing.Point(79, 287);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
@@ -190,13 +191,24 @@ namespace GiaoDien
             this.cbbTimKiemCuaHang.Name = "cbbTimKiemCuaHang";
             this.cbbTimKiemCuaHang.Size = new System.Drawing.Size(492, 28);
             this.cbbTimKiemCuaHang.TabIndex = 7;
-            
+            // 
+            // btnTroVe
+            // 
+            this.btnTroVe.Location = new System.Drawing.Point(447, 578);
+            this.btnTroVe.Name = "btnTroVe";
+            this.btnTroVe.Size = new System.Drawing.Size(125, 47);
+            this.btnTroVe.TabIndex = 8;
+            this.btnTroVe.Text = "TRỞ VỀ";
+            this.btnTroVe.UseVisualStyleBackColor = true;
+            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1049, 698);
+            this.Controls.Add(this.btnTroVe);
             this.Controls.Add(this.cbbTimKiemCuaHang);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView1);
@@ -237,5 +249,6 @@ namespace GiaoDien
         private DataGridViewTextBoxColumn soLuongChiNhanhDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn soDienThoaiDataGridViewTextBoxColumn;
         private ComboBox cbbTimKiemCuaHang;
+        private Button btnTroVe;
     }
 }

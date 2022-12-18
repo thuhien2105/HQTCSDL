@@ -57,6 +57,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DOANDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DOANDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOANDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DOANDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOANDataSet21.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +241,28 @@
     </None>
     <None Include="DOANDataSet.xss">
       <DependentUpon>DOANDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DOANDataSet1.xsc">
+      <DependentUpon>DOANDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DOANDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DOANDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DOANDataSet1.xss">
+      <DependentUpon>DOANDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DOANDataSet21.xsc">
+      <DependentUpon>DOANDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DOANDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DOANDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DOANDataSet21.xss">
+      <DependentUpon>DOANDataSet21.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

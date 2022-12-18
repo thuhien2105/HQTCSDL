@@ -52,6 +52,7 @@ namespace GiaoDien
             SqlDataReader reader = _command.ExecuteReader();
             if (reader.Read())
             {
+                MessageBox.Show("Đăng nhập thành công");
                 string loaitaikhoan = reader["loaitaikhoan"].ToString();
                 if (loaitaikhoan=="Khach hang")
                 {
@@ -64,7 +65,10 @@ namespace GiaoDien
                     form2.Show();
                     this.Hide();
                 }
-                MessageBox.Show("Đăng nhập thành công");
+                else if (loaitaikhoan=="Tai xe")
+                {
+
+                }
             }
             else
                 MessageBox.Show("Not found !!!");
@@ -91,12 +95,12 @@ namespace GiaoDien
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

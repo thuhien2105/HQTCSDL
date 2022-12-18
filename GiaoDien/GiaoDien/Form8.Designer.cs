@@ -30,28 +30,36 @@ namespace GiaoDien
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dOANDataSet1 = new GiaoDien.DOANDataSet1();
+            this.dOITACBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOI_TACTableAdapter = new GiaoDien.DOANDataSet1TableAdapters.DOI_TACTableAdapter();
+            this.tenQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thanhPhoQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongChiNhanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDienThoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbbTimKiem = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(290, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -60,119 +68,146 @@ namespace GiaoDien
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label1.Location = new System.Drawing.Point(178, 175);
+            this.label1.Location = new System.Drawing.Point(267, 269);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(0, 30);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Số nhà:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(266, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 20);
-            this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button1.Location = new System.Drawing.Point(266, 323);
+            this.button1.Location = new System.Drawing.Point(483, 520);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 29);
+            this.button1.Size = new System.Drawing.Size(108, 45);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Đồng ý";
+            this.button1.Text = "Trở về";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label2.Location = new System.Drawing.Point(177, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Tên đường:";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label3.Location = new System.Drawing.Point(178, 236);
+            this.label3.Location = new System.Drawing.Point(411, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.Size = new System.Drawing.Size(271, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Phường:";
+            this.label3.Text = "Những quán có món ăn bạn tìm kiếm ";
             // 
-            // label4
+            // dataGridView1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label4.Location = new System.Drawing.Point(178, 267);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Quận:";
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tenQuanDataGridViewTextBoxColumn,
+            this.thanhPhoQuanDataGridViewTextBoxColumn,
+            this.soLuongChiNhanhDataGridViewTextBoxColumn,
+            this.soDienThoaiDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dOITACBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(127, 190);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(859, 306);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // label5
+            // dOANDataSet1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.label5.Location = new System.Drawing.Point(178, 299);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Thành phố:";
+            this.dOANDataSet1.DataSetName = "DOANDataSet1";
+            this.dOANDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox2
+            // dOITACBindingSource
             // 
-            this.textBox2.Location = new System.Drawing.Point(266, 205);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(239, 20);
-            this.textBox2.TabIndex = 8;
+            this.dOITACBindingSource.DataMember = "DOI TAC";
+            this.dOITACBindingSource.DataSource = this.dOANDataSet1;
             // 
-            // textBox3
+            // dOI_TACTableAdapter
             // 
-            this.textBox3.Location = new System.Drawing.Point(266, 235);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(239, 20);
-            this.textBox3.TabIndex = 9;
+            this.dOI_TACTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox4
+            // tenQuanDataGridViewTextBoxColumn
             // 
-            this.textBox4.Location = new System.Drawing.Point(266, 266);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(239, 20);
-            this.textBox4.TabIndex = 10;
+            this.tenQuanDataGridViewTextBoxColumn.DataPropertyName = "Ten quan";
+            this.tenQuanDataGridViewTextBoxColumn.HeaderText = "Ten quan";
+            this.tenQuanDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.tenQuanDataGridViewTextBoxColumn.Name = "tenQuanDataGridViewTextBoxColumn";
+            this.tenQuanDataGridViewTextBoxColumn.Width = 150;
             // 
-            // textBox5
+            // thanhPhoQuanDataGridViewTextBoxColumn
             // 
-            this.textBox5.Location = new System.Drawing.Point(266, 298);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(239, 20);
-            this.textBox5.TabIndex = 11;
+            this.thanhPhoQuanDataGridViewTextBoxColumn.DataPropertyName = "Thanh pho/Quan";
+            this.thanhPhoQuanDataGridViewTextBoxColumn.HeaderText = "Thanh pho/Quan";
+            this.thanhPhoQuanDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.thanhPhoQuanDataGridViewTextBoxColumn.Name = "thanhPhoQuanDataGridViewTextBoxColumn";
+            this.thanhPhoQuanDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // soLuongChiNhanhDataGridViewTextBoxColumn
+            // 
+            this.soLuongChiNhanhDataGridViewTextBoxColumn.DataPropertyName = "So luong chi nhanh";
+            this.soLuongChiNhanhDataGridViewTextBoxColumn.HeaderText = "So luong chi nhanh";
+            this.soLuongChiNhanhDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.soLuongChiNhanhDataGridViewTextBoxColumn.Name = "soLuongChiNhanhDataGridViewTextBoxColumn";
+            this.soLuongChiNhanhDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // soDienThoaiDataGridViewTextBoxColumn
+            // 
+            this.soDienThoaiDataGridViewTextBoxColumn.DataPropertyName = "So dien thoai";
+            this.soDienThoaiDataGridViewTextBoxColumn.HeaderText = "So dien thoai";
+            this.soDienThoaiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.soDienThoaiDataGridViewTextBoxColumn.Name = "soDienThoaiDataGridViewTextBoxColumn";
+            this.soDienThoaiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(249, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Chọn quán ở đây";
+            // 
+            // cbbTimKiem
+            // 
+            this.cbbTimKiem.FormattingEnabled = true;
+            this.cbbTimKiem.Location = new System.Drawing.Point(415, 111);
+            this.cbbTimKiem.Name = "cbbTimKiem";
+            this.cbbTimKiem.Size = new System.Drawing.Size(308, 28);
+            this.cbbTimKiem.TabIndex = 8;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(827, 111);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 34);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Tìm kiếm";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form8
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(686, 390);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1029, 600);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cbbTimKiem);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form8";
             this.Text = "ĐỊA CHỈ GIAO HÀNG";
+            this.Load += new System.EventHandler(this.Form8_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,15 +217,18 @@ namespace GiaoDien
 
         private PictureBox pictureBox1;
         private Label label1;
-        private TextBox textBox1;
         private Button button1;
-        private Label label2;
         private Label label3;
-        private Label label4;
-        private Label label5;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private DataGridView dataGridView1;
+        private DOANDataSet1 dOANDataSet1;
+        private BindingSource dOITACBindingSource;
+        private DOANDataSet1TableAdapters.DOI_TACTableAdapter dOI_TACTableAdapter;
+        private DataGridViewTextBoxColumn tenQuanDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn thanhPhoQuanDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soLuongChiNhanhDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn soDienThoaiDataGridViewTextBoxColumn;
+        private Label label2;
+        private ComboBox cbbTimKiem;
+        private Button button2;
     }
 }
