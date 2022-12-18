@@ -11,7 +11,7 @@ Hệ thống đặt và giao thức ăn online
 5- Thay đổi hình thức thanh toán
 6- Theo dõi đơn hàng
 7- Đánh giá đơn hàng
-8- Thay đổi địa chỉ giao hàng
+8- Lịch sử đơn hàng
 9- Xem chi tiết đơn đặt hàng
 
 10 tài xế
@@ -25,4 +25,4 @@ Hệ thống đặt và giao thức ăn online
 16 tủy chỉnh thực đơn 
 
 
-Tình trạng đơn hàng:Chờ nhận,(Hủy đơn), Tiếp nhận/Xử lý, Tài xế đã nhận đơn hàng, Tài xế đã tới quán ăn, Tài xế đã nhận món ăn, Tài xế đã tới nơi, Giao hàng thành công. 
+Tình trạng đơn hàng:Chờ nhận,(Hủy đơn), Tài xế đã nhận đơn hàng, Tài xế đã tới quán ăn, Tài xế đã nhận món ăn, Tài xế đã tới nơi, Giao hàng thành công. 
