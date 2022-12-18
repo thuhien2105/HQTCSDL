@@ -26,3 +26,8 @@ Hệ thống đặt và giao thức ăn online
 
 
 Tình trạng đơn hàng:Chờ nhận,(Hủy đơn), Tài xế đã nhận đơn hàng, Tài xế đã tới quán ăn, Tài xế đã nhận món ăn, Tài xế đã tới nơi, Giao hàng thành công. 
+
+
+17-Quản lý nhân viên
+18-Xem danh sách hợp  đồng đối tác
+19-Duyệt hợp đồng
