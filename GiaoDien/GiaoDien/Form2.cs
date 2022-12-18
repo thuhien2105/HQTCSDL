@@ -75,6 +75,8 @@ namespace GiaoDien
             form1.Show();
             this.Hide();
         }
+
+
     }
 
 }

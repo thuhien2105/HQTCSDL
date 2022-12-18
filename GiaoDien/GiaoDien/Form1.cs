@@ -54,10 +54,11 @@ namespace GiaoDien
             {
                 MessageBox.Show("Đăng nhập thành công");
                 string loaitaikhoan = reader["loaitaikhoan"].ToString();
+                MessageBox.Show(loaitaikhoan);
                 if (loaitaikhoan=="Khach hang")
                 {
                     //lay id_khachhang
-                    String id_khachhang= reader["MaKH"].ToString();
+                    String id_khachhang = reader["MaKH"].ToString();
                     //vao form trang chu cua khach hang
                     Form2 form2 = new Form2();
                     form2.id_khachhang= id_khachhang;
@@ -67,7 +68,14 @@ namespace GiaoDien
                 }
                 else if (loaitaikhoan=="Tai xe")
                 {
-
+                    //lay id_taixe 
+                    String id_taixe = reader["MaTX"].ToString();
+                    MessageBox.Show(id_taixe);
+                    //vao form trang chu cua khach hang
+                    Form10 form10 = new Form10();
+                    form10.id_taixe = id_taixe;
+                    form10.Show();
+                    this.Hide();
                 }
             }
             else
