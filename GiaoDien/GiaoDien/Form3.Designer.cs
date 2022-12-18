@@ -36,24 +36,27 @@ namespace GiaoDien
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnTimKiemCuahang = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.dOANDataSet = new GiaoDien.DOANDataSet();
             this.dOITACBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dOI_TACTableAdapter = new GiaoDien.DOANDataSetTableAdapters.DOI_TACTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tenQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanhPhoQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongChiNhanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDienThoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.cbbTimKiemCuaHang = new System.Windows.Forms.ComboBox();
             this.btnTroVe = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dOANDataSet1 = new GiaoDien.DOANDataSet1();
+            this.dOITACBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dOI_TACTableAdapter = new GiaoDien.DOANDataSet1TableAdapters.DOI_TACTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -97,31 +100,18 @@ namespace GiaoDien
             this.vScrollBar1.Size = new System.Drawing.Size(21, 532);
             this.vScrollBar1.TabIndex = 4;
             // 
-            // dOANDataSet
-            // 
-            this.dOANDataSet.DataSetName = "DOANDataSet";
-            this.dOANDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dOITACBindingSource
-            // 
-            this.dOITACBindingSource.DataMember = "DOI TAC";
-            this.dOITACBindingSource.DataSource = this.dOANDataSet;
-            // 
-            // dOI_TACTableAdapter
-            // 
-            this.dOI_TACTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tenQuanDataGridViewTextBoxColumn,
-            this.thanhPhoQuanDataGridViewTextBoxColumn,
-            this.soLuongChiNhanhDataGridViewTextBoxColumn,
-            this.soDienThoaiDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dOITACBindingSource;
+            this.Column1,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView1.DataSource = this.dOITACBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(79, 287);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -129,42 +119,6 @@ namespace GiaoDien
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(854, 267);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // tenQuanDataGridViewTextBoxColumn
-            // 
-            this.tenQuanDataGridViewTextBoxColumn.DataPropertyName = "Ten quan";
-            this.tenQuanDataGridViewTextBoxColumn.HeaderText = "Ten quan";
-            this.tenQuanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tenQuanDataGridViewTextBoxColumn.Name = "tenQuanDataGridViewTextBoxColumn";
-            this.tenQuanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tenQuanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // thanhPhoQuanDataGridViewTextBoxColumn
-            // 
-            this.thanhPhoQuanDataGridViewTextBoxColumn.DataPropertyName = "Thanh pho/Quan";
-            this.thanhPhoQuanDataGridViewTextBoxColumn.HeaderText = "Thanh pho/Quan";
-            this.thanhPhoQuanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.thanhPhoQuanDataGridViewTextBoxColumn.Name = "thanhPhoQuanDataGridViewTextBoxColumn";
-            this.thanhPhoQuanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.thanhPhoQuanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // soLuongChiNhanhDataGridViewTextBoxColumn
-            // 
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.DataPropertyName = "So luong chi nhanh";
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.HeaderText = "So luong chi nhanh";
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.Name = "soLuongChiNhanhDataGridViewTextBoxColumn";
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.ReadOnly = true;
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // soDienThoaiDataGridViewTextBoxColumn
-            // 
-            this.soDienThoaiDataGridViewTextBoxColumn.DataPropertyName = "So dien thoai";
-            this.soDienThoaiDataGridViewTextBoxColumn.HeaderText = "So dien thoai";
-            this.soDienThoaiDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.soDienThoaiDataGridViewTextBoxColumn.Name = "soDienThoaiDataGridViewTextBoxColumn";
-            this.soDienThoaiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.soDienThoaiDataGridViewTextBoxColumn.Width = 150;
             // 
             // fillByToolStrip
             // 
@@ -202,6 +156,64 @@ namespace GiaoDien
             this.btnTroVe.UseVisualStyleBackColor = true;
             this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // dOANDataSet1
+            // 
+            this.dOANDataSet1.DataSetName = "DOANDataSet1";
+            this.dOANDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dOITACBindingSource1
+            // 
+            this.dOITACBindingSource1.DataMember = "DOI TAC";
+            this.dOITACBindingSource1.DataSource = this.dOANDataSet1;
+            // 
+            // dOI_TACTableAdapter
+            // 
+            this.dOI_TACTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Ten quan";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Ten quan";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Thanh pho/Quan";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Thanh pho/Quan";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "So luong chi nhanh";
+            this.dataGridViewTextBoxColumn3.HeaderText = "So luong chi nhanh";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "So dien thoai";
+            this.dataGridViewTextBoxColumn4.HeaderText = "So dien thoai";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -223,11 +235,12 @@ namespace GiaoDien
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,9 +251,9 @@ namespace GiaoDien
         private PictureBox pictureBox2;
         private Button btnTimKiemCuahang;
         private VScrollBar vScrollBar1;
-        private DOANDataSet dOANDataSet;
+
         private BindingSource dOITACBindingSource;
-        private DOANDataSetTableAdapters.DOI_TACTableAdapter dOI_TACTableAdapter;
+
         private DataGridView dataGridView1;
         private ToolStrip fillByToolStrip;
         private ToolStripButton fillByToolStripButton;
@@ -250,5 +263,13 @@ namespace GiaoDien
         private DataGridViewTextBoxColumn soDienThoaiDataGridViewTextBoxColumn;
         private ComboBox cbbTimKiemCuaHang;
         private Button btnTroVe;
+        private DataGridViewButtonColumn Column1;
+        private DOANDataSet1 dOANDataSet1;
+        private BindingSource dOITACBindingSource1;
+        private DOANDataSet1TableAdapters.DOI_TACTableAdapter dOI_TACTableAdapter;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

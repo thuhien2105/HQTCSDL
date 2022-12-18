@@ -34,9 +34,7 @@ namespace GiaoDien
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dOANDataSet2 = new GiaoDien.DOANDataSet2();
             this.dONHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dON_HANGTableAdapter = new GiaoDien.DOANDataSet2TableAdapters.DON_HANGTableAdapter();
             this.iddonhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +45,7 @@ namespace GiaoDien
             this.diachiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTroVe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet2)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.dONHANGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,20 +76,7 @@ namespace GiaoDien
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1080, 337);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // dOANDataSet2
-            // 
-            this.dOANDataSet2.DataSetName = "DOANDataSet2";
-            this.dOANDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dONHANGBindingSource
-            // 
-            this.dONHANGBindingSource.DataMember = "DON HANG";
-            this.dONHANGBindingSource.DataSource = this.dOANDataSet2;
-            // 
-            // dON_HANGTableAdapter
-            // 
-            this.dON_HANGTableAdapter.ClearBeforeFill = true;
+            
             // 
             // iddonhangDataGridViewTextBoxColumn
             // 
@@ -182,7 +167,7 @@ namespace GiaoDien
             this.Text = "LỊCH SỬ ĐƠN ĐẶT HÀNG";
             this.Load += new System.EventHandler(this.Form9_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet2)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.dONHANGBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -191,9 +176,9 @@ namespace GiaoDien
         #endregion
         private VScrollBar vScrollBar1;
         private DataGridView dataGridView1;
-        private DOANDataSet2 dOANDataSet2;
+
         private BindingSource dONHANGBindingSource;
-        private DOANDataSet2TableAdapters.DON_HANGTableAdapter dON_HANGTableAdapter;
+
         private DataGridViewTextBoxColumn iddonhangDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn maKHDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn ngayLapDataGridViewTextBoxColumn;

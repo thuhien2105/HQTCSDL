@@ -27,7 +27,7 @@ namespace GiaoDien
         private void Form9_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dOANDataSet2.DON_HANG' table. You can move, or remove it, as needed.
-            this.dON_HANGTableAdapter.Fill(this.dOANDataSet2.DON_HANG);
+
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataAdapter adapter = new SqlDataAdapter("exec lichsudonhang '"+id_khachhang+"'", connection);
             DataTable table = new DataTable();
@@ -35,7 +35,7 @@ namespace GiaoDien
             //setGridViewEditable(false);
 
             dataGridView1.DataSource = table;
-
+            connection.Close();
         }
 
         private void btnTroVe_Click(object sender, EventArgs e)

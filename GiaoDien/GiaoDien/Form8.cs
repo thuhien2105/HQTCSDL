@@ -40,12 +40,13 @@ namespace GiaoDien
             //setGridViewEditable(false);
 
             dataGridView1.DataSource = table;
-
+            connection.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 form2=new Form2();
+            form2.id_khachhang = id_khachhang;
             form2.Show();
             this.Hide();
         }

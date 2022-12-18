@@ -47,6 +47,7 @@ namespace GiaoDien
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
             SqlDataReader reader = _command.ExecuteReader();
+
             Form2 form2 = new Form2();
             form2.Show();
             this.Hide();    
@@ -63,6 +64,7 @@ namespace GiaoDien
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
             SqlDataReader reader = _command.ExecuteReader();
+
             Form2 form2 = new Form2();
             form2.Show();
             this.Close();

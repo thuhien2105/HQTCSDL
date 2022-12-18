@@ -37,9 +37,7 @@ namespace GiaoDien
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dOANDataSet1 = new GiaoDien.DOANDataSet1();
             this.dOITACBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dOI_TACTableAdapter = new GiaoDien.DOANDataSet1TableAdapters.DOI_TACTableAdapter();
             this.tenQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhPhoQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongChiNhanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +47,7 @@ namespace GiaoDien
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet1)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,20 +109,7 @@ namespace GiaoDien
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(859, 306);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // dOANDataSet1
-            // 
-            this.dOANDataSet1.DataSetName = "DOANDataSet1";
-            this.dOANDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dOITACBindingSource
-            // 
-            this.dOITACBindingSource.DataMember = "DOI TAC";
-            this.dOITACBindingSource.DataSource = this.dOANDataSet1;
-            // 
-            // dOI_TACTableAdapter
-            // 
-            this.dOI_TACTableAdapter.ClearBeforeFill = true;
+           
             // 
             // tenQuanDataGridViewTextBoxColumn
             // 
@@ -206,7 +191,7 @@ namespace GiaoDien
             this.Load += new System.EventHandler(this.Form8_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet1)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,9 +205,9 @@ namespace GiaoDien
         private Button button1;
         private Label label3;
         private DataGridView dataGridView1;
-        private DOANDataSet1 dOANDataSet1;
+        //private DOANDataSet1 dOANDataSet1;
         private BindingSource dOITACBindingSource;
-        private DOANDataSet1TableAdapters.DOI_TACTableAdapter dOI_TACTableAdapter;
+        //private DOANDataSet1TableAdapters.DOI_TACTableAdapter dOI_TACTableAdapter;
         private DataGridViewTextBoxColumn tenQuanDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn thanhPhoQuanDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn soLuongChiNhanhDataGridViewTextBoxColumn;

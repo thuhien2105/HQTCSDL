@@ -76,7 +76,7 @@ namespace GiaoDien
             {
                 id_donhang = reader["id_donhang"].ToString();
             }
-            MessageBox.Show(id_donhang);
+
         }
 
         private void btnDongY_Click(object sender, EventArgs e)
@@ -95,10 +95,12 @@ namespace GiaoDien
             _command = new SqlCommand(sql_tong, _connection);
             _command.Connection = _connection;
             SqlDataReader reader_tong = _command.ExecuteReader();
+
             if (reader_tong.Read())
             {
                 lblTong.Text = "Tổng tiền món ăn: "+ reader_tong["Tong"].ToString();
             }
+
         }
 
         private void btnChonMonAn_Click(object sender, EventArgs e)
@@ -120,6 +122,7 @@ namespace GiaoDien
                 lblGia.Text = reader["Gia"].ToString();
                 lblMieuTa.Text = reader["Mieu ta"].ToString();
             }
+
 
         }
 
@@ -148,7 +151,8 @@ namespace GiaoDien
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
             SqlDataReader reader = _command.ExecuteReader();
-
+            reader.Close();
+            _connection.Close();
             Form5 form5= new Form5();
             form5.id_donhang = id_donhang;
             if (reader.Read())

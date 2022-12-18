@@ -16,6 +16,7 @@ namespace GiaoDien
     {
         public String id_taixe;
         public String id_khuvuc;
+        public String id_donhang;
         SqlConnection _connection = null;
         SqlCommand _command = null;
         String connectionString = "";
@@ -28,6 +29,7 @@ namespace GiaoDien
 
         private void Form10_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dOANDataSet.DON_HANG' table. You can move, or remove it, as needed.
             //lay khu vuc cua tac xe
             //Bước 1: Tạo đối tượng kết nối để CSDL & mở kết nối
             _connection = new SqlConnection(connectionString);
@@ -39,10 +41,12 @@ namespace GiaoDien
             _command.Connection = _connection;
             //Bước 4: Thực thi câu SQL và lấy kết quả trả về
             SqlDataReader reader = _command.ExecuteReader();
-            id_khuvuc = reader["id_khuvuc"].ToString();
-
+            if (reader.Read())
+            {
+                id_khuvuc = reader["id_khuvuc"].ToString();
+            }
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataAdapter adapter = new SqlDataAdapter("exec dsdonhang '"+id_khuvuc+"'", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter("exec dsdonhang '" + id_khuvuc+"'", connection);
             DataTable table = new DataTable();
             adapter.Fill(table);
             cbbDSDonHang.ValueMember = "id_donhang";
@@ -50,10 +54,30 @@ namespace GiaoDien
             cbbDSDonHang.DataSource = table;
             cbbDSDonHang.SelectedIndex = -1;
 
-
-            //setGridViewEditable(false);
-
             dataGridView1.DataSource = table;
+        }
+
+        private void btnChonDonHang_Click(object sender, EventArgs e)
+        {
+            DataRowView row = (DataRowView)cbbDSDonHang.SelectedItem;
+            id_donhang = (String)row.Row["id_donhang"];
+            //Bước 1: Tạo đối tượng kết nối để CSDL & mở kết nối
+            _connection = new SqlConnection(connectionString);
+            _connection.Open();
+            //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
+            String sql = "exec taixe_nhandon '"+id_donhang+"','"+id_taixe+"'";
+            //Bước 3: Tạo đối tượng thực thi câu lệnh
+            _command = new SqlCommand(sql, _connection);
+            _command.Connection = _connection;
+            //Bước 4: Thực thi câu SQL và lấy kết quả trả về
+            SqlDataReader reader = _command.ExecuteReader();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
         }
     }
 }

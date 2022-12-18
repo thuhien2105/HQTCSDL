@@ -42,7 +42,7 @@ namespace GiaoDien
             cbbMaDonHang.ValueMember = "id_donhang";
             cbbMaDonHang.DisplayMember = "id_donhang";
             cbbMaDonHang.SelectedIndex = -1;
-
+            connection.Close();
         }
 
        
@@ -68,8 +68,10 @@ namespace GiaoDien
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
             SqlDataReader reader = _command.ExecuteReader();
-
+            reader.Close();
+            _connection.Close();
             Form2 form2 = new Form2();
+            form2.id_khachhang = id_khachhang;
             form2.Show();
             this.Close();
 
@@ -78,6 +80,7 @@ namespace GiaoDien
         private void btnTroVe_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
+            form2.id_khachhang = id_khachhang;
             form2.Show();
             this.Close();
         }

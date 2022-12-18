@@ -24,7 +24,7 @@ namespace GiaoDien {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DOANDataSet : global::System.Data.DataSet {
         
-        private DOI_TACDataTable tableDOI_TAC;
+        private DON_HANGDataTable tableDON_HANG;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace GiaoDien {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DOI TAC"] != null)) {
-                    base.Tables.Add(new DOI_TACDataTable(ds.Tables["DOI TAC"]));
+                if ((ds.Tables["DON HANG"] != null)) {
+                    base.Tables.Add(new DON_HANGDataTable(ds.Tables["DON HANG"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GiaoDien {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DOI_TACDataTable DOI_TAC {
+        public DON_HANGDataTable DON_HANG {
             get {
-                return this.tableDOI_TAC;
+                return this.tableDON_HANG;
             }
         }
         
@@ -152,8 +152,8 @@ namespace GiaoDien {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DOI TAC"] != null)) {
-                    base.Tables.Add(new DOI_TACDataTable(ds.Tables["DOI TAC"]));
+                if ((ds.Tables["DON HANG"] != null)) {
+                    base.Tables.Add(new DON_HANGDataTable(ds.Tables["DON HANG"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GiaoDien {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDOI_TAC = ((DOI_TACDataTable)(base.Tables["DOI TAC"]));
+            this.tableDON_HANG = ((DON_HANGDataTable)(base.Tables["DON HANG"]));
             if ((initTable == true)) {
-                if ((this.tableDOI_TAC != null)) {
-                    this.tableDOI_TAC.InitVars();
+                if ((this.tableDON_HANG != null)) {
+                    this.tableDON_HANG.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace GiaoDien {
             this.Namespace = "http://tempuri.org/DOANDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDOI_TAC = new DOI_TACDataTable();
-            base.Tables.Add(this.tableDOI_TAC);
+            this.tableDON_HANG = new DON_HANGDataTable();
+            base.Tables.Add(this.tableDON_HANG);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeDOI_TAC() {
+        private bool ShouldSerializeDON_HANG() {
             return false;
         }
         
@@ -270,39 +270,33 @@ namespace GiaoDien {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void DOI_TACRowChangeEventHandler(object sender, DOI_TACRowChangeEvent e);
+        public delegate void DON_HANGRowChangeEventHandler(object sender, DON_HANGRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DOI_TACDataTable : global::System.Data.TypedTableBase<DOI_TACRow> {
+        public partial class DON_HANGDataTable : global::System.Data.TypedTableBase<DON_HANGRow> {
             
-            private global::System.Data.DataColumn columnEmail;
+            private global::System.Data.DataColumn columnid_donhang;
             
-            private global::System.Data.DataColumn columnTen_quan;
+            private global::System.Data.DataColumn columnNgay_lap;
             
-            private global::System.Data.DataColumn _columnThanh_pho_Quan;
+            private global::System.Data.DataColumn columnHinh_thuc_thanh_toan;
             
-            private global::System.Data.DataColumn columnSo_luong_chi_nhanh;
+            private global::System.Data.DataColumn columnPhi_van_chuyen;
             
-            private global::System.Data.DataColumn columnSo_luong_don_hang_dk;
+            private global::System.Data.DataColumn columnTong_don_hang;
             
-            private global::System.Data.DataColumn columnSo_dien_thoai;
+            private global::System.Data.DataColumn columnTinh_trang_don_hang;
             
-            private global::System.Data.DataColumn columnMa_doi_tac;
-            
-            private global::System.Data.DataColumn columntentaikhoan;
-            
-            private global::System.Data.DataColumn columnTen_Ngan_hang;
-            
-            private global::System.Data.DataColumn columnSo_tai_khoan;
+            private global::System.Data.DataColumn columndiachi;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOI_TACDataTable() {
-                this.TableName = "DOI TAC";
+            public DON_HANGDataTable() {
+                this.TableName = "DON HANG";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +304,7 @@ namespace GiaoDien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DOI_TACDataTable(global::System.Data.DataTable table) {
+            internal DON_HANGDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,88 +321,64 @@ namespace GiaoDien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected DOI_TACDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DON_HANGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
+            public global::System.Data.DataColumn id_donhangColumn {
                 get {
-                    return this.columnEmail;
+                    return this.columnid_donhang;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Ten_quanColumn {
+            public global::System.Data.DataColumn Ngay_lapColumn {
                 get {
-                    return this.columnTen_quan;
+                    return this.columnNgay_lap;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn _Thanh_pho_QuanColumn {
+            public global::System.Data.DataColumn Hinh_thuc_thanh_toanColumn {
                 get {
-                    return this._columnThanh_pho_Quan;
+                    return this.columnHinh_thuc_thanh_toan;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn So_luong_chi_nhanhColumn {
+            public global::System.Data.DataColumn Phi_van_chuyenColumn {
                 get {
-                    return this.columnSo_luong_chi_nhanh;
+                    return this.columnPhi_van_chuyen;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn So_luong_don_hang_dkColumn {
+            public global::System.Data.DataColumn Tong_don_hangColumn {
                 get {
-                    return this.columnSo_luong_don_hang_dk;
+                    return this.columnTong_don_hang;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn So_dien_thoaiColumn {
+            public global::System.Data.DataColumn Tinh_trang_don_hangColumn {
                 get {
-                    return this.columnSo_dien_thoai;
+                    return this.columnTinh_trang_don_hang;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Ma_doi_tacColumn {
+            public global::System.Data.DataColumn diachiColumn {
                 get {
-                    return this.columnMa_doi_tac;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn tentaikhoanColumn {
-                get {
-                    return this.columntentaikhoan;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Ten_Ngan_hangColumn {
-                get {
-                    return this.columnTen_Ngan_hang;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn So_tai_khoanColumn {
-                get {
-                    return this.columnSo_tai_khoan;
+                    return this.columndiachi;
                 }
             }
             
@@ -423,61 +393,58 @@ namespace GiaoDien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOI_TACRow this[int index] {
+            public DON_HANGRow this[int index] {
                 get {
-                    return ((DOI_TACRow)(this.Rows[index]));
+                    return ((DON_HANGRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DOI_TACRowChangeEventHandler DOI_TACRowChanging;
+            public event DON_HANGRowChangeEventHandler DON_HANGRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DOI_TACRowChangeEventHandler DOI_TACRowChanged;
+            public event DON_HANGRowChangeEventHandler DON_HANGRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DOI_TACRowChangeEventHandler DOI_TACRowDeleting;
+            public event DON_HANGRowChangeEventHandler DON_HANGRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DOI_TACRowChangeEventHandler DOI_TACRowDeleted;
+            public event DON_HANGRowChangeEventHandler DON_HANGRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddDOI_TACRow(DOI_TACRow row) {
+            public void AddDON_HANGRow(DON_HANGRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOI_TACRow AddDOI_TACRow(string Email, string Ten_quan, string _Thanh_pho_Quan, int So_luong_chi_nhanh, int So_luong_don_hang_dk, decimal So_dien_thoai, string Ma_doi_tac, string tentaikhoan, string Ten_Ngan_hang, decimal So_tai_khoan) {
-                DOI_TACRow rowDOI_TACRow = ((DOI_TACRow)(this.NewRow()));
+            public DON_HANGRow AddDON_HANGRow(string id_donhang, System.DateTime Ngay_lap, string Hinh_thuc_thanh_toan, decimal Phi_van_chuyen, int Tong_don_hang, string Tinh_trang_don_hang, string diachi) {
+                DON_HANGRow rowDON_HANGRow = ((DON_HANGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Email,
-                        Ten_quan,
-                        _Thanh_pho_Quan,
-                        So_luong_chi_nhanh,
-                        So_luong_don_hang_dk,
-                        So_dien_thoai,
-                        Ma_doi_tac,
-                        tentaikhoan,
-                        Ten_Ngan_hang,
-                        So_tai_khoan};
-                rowDOI_TACRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDOI_TACRow);
-                return rowDOI_TACRow;
+                        id_donhang,
+                        Ngay_lap,
+                        Hinh_thuc_thanh_toan,
+                        Phi_van_chuyen,
+                        Tong_don_hang,
+                        Tinh_trang_don_hang,
+                        diachi};
+                rowDON_HANGRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDON_HANGRow);
+                return rowDON_HANGRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOI_TACRow FindByMa_doi_tac(string Ma_doi_tac) {
-                return ((DOI_TACRow)(this.Rows.Find(new object[] {
-                            Ma_doi_tac})));
+            public DON_HANGRow FindByid_donhang(string id_donhang) {
+                return ((DON_HANGRow)(this.Rows.Find(new object[] {
+                            id_donhang})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DOI_TACDataTable cln = ((DOI_TACDataTable)(base.Clone()));
+                DON_HANGDataTable cln = ((DON_HANGDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -485,91 +452,72 @@ namespace GiaoDien {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DOI_TACDataTable();
+                return new DON_HANGDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnEmail = base.Columns["Email"];
-                this.columnTen_quan = base.Columns["Ten quan"];
-                this._columnThanh_pho_Quan = base.Columns["Thanh pho/Quan"];
-                this.columnSo_luong_chi_nhanh = base.Columns["So luong chi nhanh"];
-                this.columnSo_luong_don_hang_dk = base.Columns["So luong don hang dk"];
-                this.columnSo_dien_thoai = base.Columns["So dien thoai"];
-                this.columnMa_doi_tac = base.Columns["Ma doi tac"];
-                this.columntentaikhoan = base.Columns["tentaikhoan"];
-                this.columnTen_Ngan_hang = base.Columns["Ten Ngan hang"];
-                this.columnSo_tai_khoan = base.Columns["So tai khoan"];
+                this.columnid_donhang = base.Columns["id_donhang"];
+                this.columnNgay_lap = base.Columns["Ngay lap"];
+                this.columnHinh_thuc_thanh_toan = base.Columns["Hinh thuc thanh toan"];
+                this.columnPhi_van_chuyen = base.Columns["Phi van chuyen"];
+                this.columnTong_don_hang = base.Columns["Tong don hang"];
+                this.columnTinh_trang_don_hang = base.Columns["Tinh trang don hang"];
+                this.columndiachi = base.Columns["diachi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
-                this.columnTen_quan = new global::System.Data.DataColumn("Ten quan", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTen_quan);
-                this._columnThanh_pho_Quan = new global::System.Data.DataColumn("Thanh pho/Quan", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnThanh_pho_Quan.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnThanh_pho_Quan");
-                this._columnThanh_pho_Quan.ExtendedProperties.Add("Generator_UserColumnName", "Thanh pho/Quan");
-                base.Columns.Add(this._columnThanh_pho_Quan);
-                this.columnSo_luong_chi_nhanh = new global::System.Data.DataColumn("So luong chi nhanh", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSo_luong_chi_nhanh);
-                this.columnSo_luong_don_hang_dk = new global::System.Data.DataColumn("So luong don hang dk", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSo_luong_don_hang_dk);
-                this.columnSo_dien_thoai = new global::System.Data.DataColumn("So dien thoai", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSo_dien_thoai);
-                this.columnMa_doi_tac = new global::System.Data.DataColumn("Ma doi tac", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMa_doi_tac);
-                this.columntentaikhoan = new global::System.Data.DataColumn("tentaikhoan", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntentaikhoan);
-                this.columnTen_Ngan_hang = new global::System.Data.DataColumn("Ten Ngan hang", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTen_Ngan_hang);
-                this.columnSo_tai_khoan = new global::System.Data.DataColumn("So tai khoan", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSo_tai_khoan);
+                this.columnid_donhang = new global::System.Data.DataColumn("id_donhang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_donhang);
+                this.columnNgay_lap = new global::System.Data.DataColumn("Ngay lap", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNgay_lap);
+                this.columnHinh_thuc_thanh_toan = new global::System.Data.DataColumn("Hinh thuc thanh toan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHinh_thuc_thanh_toan);
+                this.columnPhi_van_chuyen = new global::System.Data.DataColumn("Phi van chuyen", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhi_van_chuyen);
+                this.columnTong_don_hang = new global::System.Data.DataColumn("Tong don hang", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTong_don_hang);
+                this.columnTinh_trang_don_hang = new global::System.Data.DataColumn("Tinh trang don hang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTinh_trang_don_hang);
+                this.columndiachi = new global::System.Data.DataColumn("diachi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndiachi);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMa_doi_tac}, true));
-                this.columnEmail.AllowDBNull = false;
-                this.columnEmail.MaxLength = 50;
-                this.columnTen_quan.MaxLength = 20;
-                this._columnThanh_pho_Quan.AllowDBNull = false;
-                this._columnThanh_pho_Quan.MaxLength = 20;
-                this.columnSo_dien_thoai.AllowDBNull = false;
-                this.columnMa_doi_tac.AllowDBNull = false;
-                this.columnMa_doi_tac.Unique = true;
-                this.columnMa_doi_tac.MaxLength = 10;
-                this.columntentaikhoan.AllowDBNull = false;
-                this.columntentaikhoan.MaxLength = 50;
-                this.columnTen_Ngan_hang.AllowDBNull = false;
-                this.columnTen_Ngan_hang.MaxLength = 10;
-                this.columnSo_tai_khoan.AllowDBNull = false;
+                                this.columnid_donhang}, true));
+                this.columnid_donhang.AllowDBNull = false;
+                this.columnid_donhang.Unique = true;
+                this.columnid_donhang.MaxLength = 10;
+                this.columnHinh_thuc_thanh_toan.MaxLength = 50;
+                this.columnTinh_trang_don_hang.MaxLength = 256;
+                this.columndiachi.MaxLength = 256;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOI_TACRow NewDOI_TACRow() {
-                return ((DOI_TACRow)(this.NewRow()));
+            public DON_HANGRow NewDON_HANGRow() {
+                return ((DON_HANGRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DOI_TACRow(builder);
+                return new DON_HANGRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DOI_TACRow);
+                return typeof(DON_HANGRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DOI_TACRowChanged != null)) {
-                    this.DOI_TACRowChanged(this, new DOI_TACRowChangeEvent(((DOI_TACRow)(e.Row)), e.Action));
+                if ((this.DON_HANGRowChanged != null)) {
+                    this.DON_HANGRowChanged(this, new DON_HANGRowChangeEvent(((DON_HANGRow)(e.Row)), e.Action));
                 }
             }
             
@@ -577,8 +525,8 @@ namespace GiaoDien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DOI_TACRowChanging != null)) {
-                    this.DOI_TACRowChanging(this, new DOI_TACRowChangeEvent(((DOI_TACRow)(e.Row)), e.Action));
+                if ((this.DON_HANGRowChanging != null)) {
+                    this.DON_HANGRowChanging(this, new DON_HANGRowChangeEvent(((DON_HANGRow)(e.Row)), e.Action));
                 }
             }
             
@@ -586,8 +534,8 @@ namespace GiaoDien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DOI_TACRowDeleted != null)) {
-                    this.DOI_TACRowDeleted(this, new DOI_TACRowChangeEvent(((DOI_TACRow)(e.Row)), e.Action));
+                if ((this.DON_HANGRowDeleted != null)) {
+                    this.DON_HANGRowDeleted(this, new DON_HANGRowChangeEvent(((DON_HANGRow)(e.Row)), e.Action));
                 }
             }
             
@@ -595,14 +543,14 @@ namespace GiaoDien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DOI_TACRowDeleting != null)) {
-                    this.DOI_TACRowDeleting(this, new DOI_TACRowChangeEvent(((DOI_TACRow)(e.Row)), e.Action));
+                if ((this.DON_HANGRowDeleting != null)) {
+                    this.DON_HANGRowDeleting(this, new DON_HANGRowChangeEvent(((DON_HANGRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveDOI_TACRow(DOI_TACRow row) {
+            public void RemoveDON_HANGRow(DON_HANGRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -629,7 +577,7 @@ namespace GiaoDien {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DOI_TACDataTable";
+                attribute2.FixedValue = "DON_HANGDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -673,176 +621,194 @@ namespace GiaoDien {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DOI_TACRow : global::System.Data.DataRow {
+        public partial class DON_HANGRow : global::System.Data.DataRow {
             
-            private DOI_TACDataTable tableDOI_TAC;
+            private DON_HANGDataTable tableDON_HANG;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DOI_TACRow(global::System.Data.DataRowBuilder rb) : 
+            internal DON_HANGRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDOI_TAC = ((DOI_TACDataTable)(this.Table));
+                this.tableDON_HANG = ((DON_HANGDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Email {
+            public string id_donhang {
                 get {
-                    return ((string)(this[this.tableDOI_TAC.EmailColumn]));
+                    return ((string)(this[this.tableDON_HANG.id_donhangColumn]));
                 }
                 set {
-                    this[this.tableDOI_TAC.EmailColumn] = value;
+                    this[this.tableDON_HANG.id_donhangColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Ten_quan {
-                get {
-                    try {
-                        return ((string)(this[this.tableDOI_TAC.Ten_quanColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ten quan\' in table \'DOI TAC\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDOI_TAC.Ten_quanColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string _Thanh_pho_Quan {
-                get {
-                    return ((string)(this[this.tableDOI_TAC._Thanh_pho_QuanColumn]));
-                }
-                set {
-                    this[this.tableDOI_TAC._Thanh_pho_QuanColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int So_luong_chi_nhanh {
+            public System.DateTime Ngay_lap {
                 get {
                     try {
-                        return ((int)(this[this.tableDOI_TAC.So_luong_chi_nhanhColumn]));
+                        return ((global::System.DateTime)(this[this.tableDON_HANG.Ngay_lapColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'So luong chi nhanh\' in table \'DOI TAC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ngay lap\' in table \'DON HANG\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDOI_TAC.So_luong_chi_nhanhColumn] = value;
+                    this[this.tableDON_HANG.Ngay_lapColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int So_luong_don_hang_dk {
+            public string Hinh_thuc_thanh_toan {
                 get {
                     try {
-                        return ((int)(this[this.tableDOI_TAC.So_luong_don_hang_dkColumn]));
+                        return ((string)(this[this.tableDON_HANG.Hinh_thuc_thanh_toanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'So luong don hang dk\' in table \'DOI TAC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Hinh thuc thanh toan\' in table \'DON HANG\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDOI_TAC.So_luong_don_hang_dkColumn] = value;
+                    this[this.tableDON_HANG.Hinh_thuc_thanh_toanColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal So_dien_thoai {
+            public decimal Phi_van_chuyen {
                 get {
-                    return ((decimal)(this[this.tableDOI_TAC.So_dien_thoaiColumn]));
+                    try {
+                        return ((decimal)(this[this.tableDON_HANG.Phi_van_chuyenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Phi van chuyen\' in table \'DON HANG\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableDOI_TAC.So_dien_thoaiColumn] = value;
+                    this[this.tableDON_HANG.Phi_van_chuyenColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Ma_doi_tac {
+            public int Tong_don_hang {
                 get {
-                    return ((string)(this[this.tableDOI_TAC.Ma_doi_tacColumn]));
+                    try {
+                        return ((int)(this[this.tableDON_HANG.Tong_don_hangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tong don hang\' in table \'DON HANG\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableDOI_TAC.Ma_doi_tacColumn] = value;
+                    this[this.tableDON_HANG.Tong_don_hangColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string tentaikhoan {
+            public string Tinh_trang_don_hang {
                 get {
-                    return ((string)(this[this.tableDOI_TAC.tentaikhoanColumn]));
+                    try {
+                        return ((string)(this[this.tableDON_HANG.Tinh_trang_don_hangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tinh trang don hang\' in table \'DON HANG\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableDOI_TAC.tentaikhoanColumn] = value;
+                    this[this.tableDON_HANG.Tinh_trang_don_hangColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Ten_Ngan_hang {
+            public string diachi {
                 get {
-                    return ((string)(this[this.tableDOI_TAC.Ten_Ngan_hangColumn]));
+                    try {
+                        return ((string)(this[this.tableDON_HANG.diachiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'diachi\' in table \'DON HANG\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableDOI_TAC.Ten_Ngan_hangColumn] = value;
+                    this[this.tableDON_HANG.diachiColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal So_tai_khoan {
-                get {
-                    return ((decimal)(this[this.tableDOI_TAC.So_tai_khoanColumn]));
-                }
-                set {
-                    this[this.tableDOI_TAC.So_tai_khoanColumn] = value;
-                }
+            public bool IsNgay_lapNull() {
+                return this.IsNull(this.tableDON_HANG.Ngay_lapColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTen_quanNull() {
-                return this.IsNull(this.tableDOI_TAC.Ten_quanColumn);
+            public void SetNgay_lapNull() {
+                this[this.tableDON_HANG.Ngay_lapColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTen_quanNull() {
-                this[this.tableDOI_TAC.Ten_quanColumn] = global::System.Convert.DBNull;
+            public bool IsHinh_thuc_thanh_toanNull() {
+                return this.IsNull(this.tableDON_HANG.Hinh_thuc_thanh_toanColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSo_luong_chi_nhanhNull() {
-                return this.IsNull(this.tableDOI_TAC.So_luong_chi_nhanhColumn);
+            public void SetHinh_thuc_thanh_toanNull() {
+                this[this.tableDON_HANG.Hinh_thuc_thanh_toanColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSo_luong_chi_nhanhNull() {
-                this[this.tableDOI_TAC.So_luong_chi_nhanhColumn] = global::System.Convert.DBNull;
+            public bool IsPhi_van_chuyenNull() {
+                return this.IsNull(this.tableDON_HANG.Phi_van_chuyenColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSo_luong_don_hang_dkNull() {
-                return this.IsNull(this.tableDOI_TAC.So_luong_don_hang_dkColumn);
+            public void SetPhi_van_chuyenNull() {
+                this[this.tableDON_HANG.Phi_van_chuyenColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSo_luong_don_hang_dkNull() {
-                this[this.tableDOI_TAC.So_luong_don_hang_dkColumn] = global::System.Convert.DBNull;
+            public bool IsTong_don_hangNull() {
+                return this.IsNull(this.tableDON_HANG.Tong_don_hangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTong_don_hangNull() {
+                this[this.tableDON_HANG.Tong_don_hangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTinh_trang_don_hangNull() {
+                return this.IsNull(this.tableDON_HANG.Tinh_trang_don_hangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTinh_trang_don_hangNull() {
+                this[this.tableDON_HANG.Tinh_trang_don_hangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsdiachiNull() {
+                return this.IsNull(this.tableDON_HANG.diachiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetdiachiNull() {
+                this[this.tableDON_HANG.diachiColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -850,22 +816,22 @@ namespace GiaoDien {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class DOI_TACRowChangeEvent : global::System.EventArgs {
+        public class DON_HANGRowChangeEvent : global::System.EventArgs {
             
-            private DOI_TACRow eventRow;
+            private DON_HANGRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOI_TACRowChangeEvent(DOI_TACRow row, global::System.Data.DataRowAction action) {
+            public DON_HANGRowChangeEvent(DON_HANGRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOI_TACRow Row {
+            public DON_HANGRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -893,7 +859,7 @@ namespace GiaoDien.DOANDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DOI_TACTableAdapter : global::System.ComponentModel.Component {
+    public partial class DON_HANGTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -907,7 +873,7 @@ namespace GiaoDien.DOANDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DOI_TACTableAdapter() {
+        public DON_HANGTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1004,78 +970,57 @@ namespace GiaoDien.DOANDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DOI TAC";
-            tableMapping.ColumnMappings.Add("Email", "Email");
-            tableMapping.ColumnMappings.Add("Ten quan", "Ten quan");
-            tableMapping.ColumnMappings.Add("Thanh pho/Quan", "Thanh pho/Quan");
-            tableMapping.ColumnMappings.Add("So luong chi nhanh", "So luong chi nhanh");
-            tableMapping.ColumnMappings.Add("So luong don hang dk", "So luong don hang dk");
-            tableMapping.ColumnMappings.Add("So dien thoai", "So dien thoai");
-            tableMapping.ColumnMappings.Add("Ma doi tac", "Ma doi tac");
-            tableMapping.ColumnMappings.Add("tentaikhoan", "tentaikhoan");
-            tableMapping.ColumnMappings.Add("Ten Ngan hang", "Ten Ngan hang");
-            tableMapping.ColumnMappings.Add("So tai khoan", "So tai khoan");
+            tableMapping.DataSetTable = "DON HANG";
+            tableMapping.ColumnMappings.Add("id_donhang", "id_donhang");
+            tableMapping.ColumnMappings.Add("Ngay lap", "Ngay lap");
+            tableMapping.ColumnMappings.Add("Hinh thuc thanh toan", "Hinh thuc thanh toan");
+            tableMapping.ColumnMappings.Add("Phi van chuyen", "Phi van chuyen");
+            tableMapping.ColumnMappings.Add("Tong don hang", "Tong don hang");
+            tableMapping.ColumnMappings.Add("Tinh trang don hang", "Tinh trang don hang");
+            tableMapping.ColumnMappings.Add("diachi", "diachi");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DOI TAC] WHERE (([Email] = @Original_Email) AND ((@IsNull_Ten_quan = 1 AND [Ten quan] IS NULL) OR ([Ten quan] = @Original_Ten_quan)) AND ([Thanh pho/Quan] = @p2) AND ((@IsNull_So_luong_chi_nhanh = 1 AND [So luong chi nhanh] IS NULL) OR ([So luong chi nhanh] = @Original_So_luong_chi_nhanh)) AND ((@IsNull_So_luong_don_hang_dk = 1 AND [So luong don hang dk] IS NULL) OR ([So luong don hang dk] = @Original_So_luong_don_hang_dk)) AND ([So dien thoai] = @Original_So_dien_thoai) AND ([Ma doi tac] = @Original_Ma_doi_tac) AND ([tentaikhoan] = @Original_tentaikhoan) AND ([Ten Ngan hang] = @Original_Ten_Ngan_hang) AND ([So tai khoan] = @Original_So_tai_khoan))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DON HANG] WHERE (([id_donhang] = @Original_id_donhang) AND ((@IsNull_Ngay_lap = 1 AND [Ngay lap] IS NULL) OR ([Ngay lap] = @Original_Ngay_lap)) AND ((@IsNull_Hinh_thuc_thanh_toan = 1 AND [Hinh thuc thanh toan] IS NULL) OR ([Hinh thuc thanh toan] = @Original_Hinh_thuc_thanh_toan)) AND ((@IsNull_Phi_van_chuyen = 1 AND [Phi van chuyen] IS NULL) OR ([Phi van chuyen] = @Original_Phi_van_chuyen)) AND ((@IsNull_Tong_don_hang = 1 AND [Tong don hang] IS NULL) OR ([Tong don hang] = @Original_Tong_don_hang)) AND ((@IsNull_Tinh_trang_don_hang = 1 AND [Tinh trang don hang] IS NULL) OR ([Tinh trang don hang] = @Original_Tinh_trang_don_hang)) AND ((@IsNull_diachi = 1 AND [diachi] IS NULL) OR ([diachi] = @Original_diachi)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ten_quan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten quan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ten_quan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten quan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Thanh pho/Quan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_So_luong_chi_nhanh", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong chi nhanh", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_luong_chi_nhanh", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong chi nhanh", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_So_luong_don_hang_dk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong don hang dk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_luong_don_hang_dk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong don hang dk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_dien_thoai", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 0, "So dien thoai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ma_doi_tac", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma doi tac", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tentaikhoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tentaikhoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ten_Ngan_hang", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten Ngan hang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_tai_khoan", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 20, 0, "So tai khoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DOI TAC] ([Email], [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don hang dk], [So dien thoai], [Ma doi tac], [tentaikhoan], [Ten Ngan hang], [So tai khoan]) VALUES (@Email, @Ten_quan, @p1, @So_luong_chi_nhanh, @So_luong_don_hang_dk, @So_dien_thoai, @Ma_doi_tac, @tentaikhoan, @Ten_Ngan_hang, @So_tai_khoan);
-SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don hang dk], [So dien thoai], [Ma doi tac], tentaikhoan, [Ten Ngan hang], [So tai khoan] FROM [DOI TAC] WHERE ([Ma doi tac] = @Ma_doi_tac)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ten_quan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten quan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Thanh pho/Quan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_luong_chi_nhanh", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong chi nhanh", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_luong_don_hang_dk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong don hang dk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_dien_thoai", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 0, "So dien thoai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ma_doi_tac", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma doi tac", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tentaikhoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tentaikhoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ten_Ngan_hang", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten Ngan hang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_tai_khoan", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 20, 0, "So tai khoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_donhang", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_donhang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ngay_lap", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ngay lap", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ngay_lap", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ngay lap", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hinh_thuc_thanh_toan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hinh thuc thanh toan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hinh_thuc_thanh_toan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hinh thuc thanh toan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phi_van_chuyen", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phi van chuyen", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phi_van_chuyen", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phi van chuyen", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tong_don_hang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tong don hang", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tong_don_hang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tong don hang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tinh_trang_don_hang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tinh trang don hang", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tinh_trang_don_hang", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tinh trang don hang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_diachi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "diachi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_diachi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "diachi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DOI TAC] SET [Email] = @Email, [Ten quan] = @Ten_quan, [Thanh pho/Quan] = @p1, [So luong chi nhanh] = @So_luong_chi_nhanh, [So luong don hang dk] = @So_luong_don_hang_dk, [So dien thoai] = @So_dien_thoai, [Ma doi tac] = @Ma_doi_tac, [tentaikhoan] = @tentaikhoan, [Ten Ngan hang] = @Ten_Ngan_hang, [So tai khoan] = @So_tai_khoan WHERE (([Email] = @Original_Email) AND ((@IsNull_Ten_quan = 1 AND [Ten quan] IS NULL) OR ([Ten quan] = @Original_Ten_quan)) AND ([Thanh pho/Quan] = @p2) AND ((@IsNull_So_luong_chi_nhanh = 1 AND [So luong chi nhanh] IS NULL) OR ([So luong chi nhanh] = @Original_So_luong_chi_nhanh)) AND ((@IsNull_So_luong_don_hang_dk = 1 AND [So luong don hang dk] IS NULL) OR ([So luong don hang dk] = @Original_So_luong_don_hang_dk)) AND ([So dien thoai] = @Original_So_dien_thoai) AND ([Ma doi tac] = @Original_Ma_doi_tac) AND ([tentaikhoan] = @Original_tentaikhoan) AND ([Ten Ngan hang] = @Original_Ten_Ngan_hang) AND ([So tai khoan] = @Original_So_tai_khoan));
-SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don hang dk], [So dien thoai], [Ma doi tac], tentaikhoan, [Ten Ngan hang], [So tai khoan] FROM [DOI TAC] WHERE ([Ma doi tac] = @Ma_doi_tac)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DON HANG] SET [id_donhang] = @id_donhang, [Ngay lap] = @Ngay_lap, [Hinh thuc thanh toan] = @Hinh_thuc_thanh_toan, [Phi van chuyen] = @Phi_van_chuyen, [Tong don hang] = @Tong_don_hang, [Tinh trang don hang] = @Tinh_trang_don_hang, [diachi] = @diachi WHERE (([id_donhang] = @Original_id_donhang) AND ((@IsNull_Ngay_lap = 1 AND [Ngay lap] IS NULL) OR ([Ngay lap] = @Original_Ngay_lap)) AND ((@IsNull_Hinh_thuc_thanh_toan = 1 AND [Hinh thuc thanh toan] IS NULL) OR ([Hinh thuc thanh toan] = @Original_Hinh_thuc_thanh_toan)) AND ((@IsNull_Phi_van_chuyen = 1 AND [Phi van chuyen] IS NULL) OR ([Phi van chuyen] = @Original_Phi_van_chuyen)) AND ((@IsNull_Tong_don_hang = 1 AND [Tong don hang] IS NULL) OR ([Tong don hang] = @Original_Tong_don_hang)) AND ((@IsNull_Tinh_trang_don_hang = 1 AND [Tinh trang don hang] IS NULL) OR ([Tinh trang don hang] = @Original_Tinh_trang_don_hang)) AND ((@IsNull_diachi = 1 AND [diachi] IS NULL) OR ([diachi] = @Original_diachi)));
+SELECT id_donhang, [Ngay lap], [Hinh thuc thanh toan], [Phi van chuyen], [Tong don hang], [Tinh trang don hang], diachi FROM [DON HANG] WHERE (id_donhang = @id_donhang)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ten_quan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten quan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Thanh pho/Quan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_luong_chi_nhanh", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong chi nhanh", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_luong_don_hang_dk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong don hang dk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_dien_thoai", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 0, "So dien thoai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ma_doi_tac", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma doi tac", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tentaikhoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tentaikhoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ten_Ngan_hang", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten Ngan hang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@So_tai_khoan", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 20, 0, "So tai khoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ten_quan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten quan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ten_quan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten quan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Thanh pho/Quan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_So_luong_chi_nhanh", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong chi nhanh", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_luong_chi_nhanh", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong chi nhanh", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_So_luong_don_hang_dk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong don hang dk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_luong_don_hang_dk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "So luong don hang dk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_dien_thoai", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 0, "So dien thoai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ma_doi_tac", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma doi tac", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tentaikhoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tentaikhoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ten_Ngan_hang", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ten Ngan hang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_So_tai_khoan", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 20, 0, "So tai khoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_donhang", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_donhang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ngay_lap", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ngay lap", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hinh_thuc_thanh_toan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hinh thuc thanh toan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phi_van_chuyen", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phi van chuyen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tong_don_hang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tong don hang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tinh_trang_don_hang", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tinh trang don hang", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@diachi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "diachi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_donhang", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_donhang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ngay_lap", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ngay lap", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ngay_lap", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ngay lap", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hinh_thuc_thanh_toan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hinh thuc thanh toan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hinh_thuc_thanh_toan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hinh thuc thanh toan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phi_van_chuyen", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phi van chuyen", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phi_van_chuyen", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phi van chuyen", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tong_don_hang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tong don hang", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tong_don_hang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tong don hang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tinh_trang_don_hang", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tinh trang don hang", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tinh_trang_don_hang", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tinh trang don hang", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_diachi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "diachi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_diachi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "diachi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1088,26 +1033,19 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don h" +
-                "ang dk], [So dien thoai], [Ma doi tac], tentaikhoan, [Ten Ngan hang], [So tai kh" +
-                "oan] FROM dbo.[DOI TAC]";
+            this._commandCollection[0].CommandText = "SELECT id_donhang, [Ngay lap], [Hinh thuc thanh toan], [Phi van chuyen], [Tong do" +
+                "n hang], [Tinh trang don hang], diachi FROM dbo.[DON HANG]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don h" +
-                "ang dk], [So dien thoai], [Ma doi tac], tentaikhoan, [Ten Ngan hang], [So tai kh" +
-                "oan] FROM dbo.[DOI TAC]";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DOANDataSet.DOI_TACDataTable dataTable) {
+        public virtual int Fill(DOANDataSet.DON_HANGDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1120,9 +1058,9 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DOANDataSet.DOI_TACDataTable GetData() {
+        public virtual DOANDataSet.DON_HANGDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DOANDataSet.DOI_TACDataTable dataTable = new DOANDataSet.DOI_TACDataTable();
+            DOANDataSet.DON_HANGDataTable dataTable = new DOANDataSet.DON_HANGDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1130,20 +1068,7 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(DOANDataSet.DOI_TACDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DOANDataSet.DOI_TACDataTable dataTable) {
+        public virtual int Update(DOANDataSet.DON_HANGDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1151,7 +1076,7 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DOANDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "DOI TAC");
+            return this.Adapter.Update(dataSet, "DON HANG");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1173,63 +1098,61 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Email, string Original_Ten_quan, string p2, global::System.Nullable<int> Original_So_luong_chi_nhanh, global::System.Nullable<int> Original_So_luong_don_hang_dk, decimal Original_So_dien_thoai, string Original_Ma_doi_tac, string Original_tentaikhoan, string Original_Ten_Ngan_hang, decimal Original_So_tai_khoan) {
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
+        public virtual int Delete(string Original_id_donhang, global::System.Nullable<global::System.DateTime> Original_Ngay_lap, string Original_Hinh_thuc_thanh_toan, global::System.Nullable<decimal> Original_Phi_van_chuyen, global::System.Nullable<int> Original_Tong_don_hang, string Original_Tinh_trang_don_hang, string Original_diachi) {
+            if ((Original_id_donhang == null)) {
+                throw new global::System.ArgumentNullException("Original_id_donhang");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Email));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_id_donhang));
             }
-            if ((Original_Ten_quan == null)) {
+            if ((Original_Ngay_lap.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Ngay_lap.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Ten_quan));
-            }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+            if ((Original_Hinh_thuc_thanh_toan == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(p2));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Hinh_thuc_thanh_toan));
             }
-            if ((Original_So_luong_chi_nhanh.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_So_luong_chi_nhanh.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_So_luong_don_hang_dk.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_So_luong_don_hang_dk.Value));
+            if ((Original_Phi_van_chuyen.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_Phi_van_chuyen.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_So_dien_thoai));
-            if ((Original_Ma_doi_tac == null)) {
-                throw new global::System.ArgumentNullException("Original_Ma_doi_tac");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Ma_doi_tac));
-            }
-            if ((Original_tentaikhoan == null)) {
-                throw new global::System.ArgumentNullException("Original_tentaikhoan");
+            if ((Original_Tong_don_hang.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Tong_don_hang.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_tentaikhoan));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_Ten_Ngan_hang == null)) {
-                throw new global::System.ArgumentNullException("Original_Ten_Ngan_hang");
+            if ((Original_Tinh_trang_don_hang == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_Ten_Ngan_hang));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Tinh_trang_don_hang));
             }
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_So_tai_khoan));
+            if ((Original_diachi == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_diachi));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1249,205 +1172,104 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Email, string Ten_quan, string p1, global::System.Nullable<int> So_luong_chi_nhanh, global::System.Nullable<int> So_luong_don_hang_dk, decimal So_dien_thoai, string Ma_doi_tac, string tentaikhoan, string Ten_Ngan_hang, decimal So_tai_khoan) {
-            if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Email));
-            }
-            if ((Ten_quan == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Ten_quan));
-            }
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p1));
-            }
-            if ((So_luong_chi_nhanh.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(So_luong_chi_nhanh.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((So_luong_don_hang_dk.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(So_luong_don_hang_dk.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(So_dien_thoai));
-            if ((Ma_doi_tac == null)) {
-                throw new global::System.ArgumentNullException("Ma_doi_tac");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Ma_doi_tac));
-            }
-            if ((tentaikhoan == null)) {
-                throw new global::System.ArgumentNullException("tentaikhoan");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(tentaikhoan));
-            }
-            if ((Ten_Ngan_hang == null)) {
-                throw new global::System.ArgumentNullException("Ten_Ngan_hang");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Ten_Ngan_hang));
-            }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(So_tai_khoan));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Email, 
-                    string Ten_quan, 
-                    string p1, 
-                    global::System.Nullable<int> So_luong_chi_nhanh, 
-                    global::System.Nullable<int> So_luong_don_hang_dk, 
-                    decimal So_dien_thoai, 
-                    string Ma_doi_tac, 
-                    string tentaikhoan, 
-                    string Ten_Ngan_hang, 
-                    decimal So_tai_khoan, 
-                    string Original_Email, 
-                    string Original_Ten_quan, 
-                    string p2, 
-                    global::System.Nullable<int> Original_So_luong_chi_nhanh, 
-                    global::System.Nullable<int> Original_So_luong_don_hang_dk, 
-                    decimal Original_So_dien_thoai, 
-                    string Original_Ma_doi_tac, 
-                    string Original_tentaikhoan, 
-                    string Original_Ten_Ngan_hang, 
-                    decimal Original_So_tai_khoan) {
-            if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
+        public virtual int Update(string id_donhang, global::System.Nullable<global::System.DateTime> Ngay_lap, string Hinh_thuc_thanh_toan, global::System.Nullable<decimal> Phi_van_chuyen, global::System.Nullable<int> Tong_don_hang, string Tinh_trang_don_hang, string diachi, string Original_id_donhang, global::System.Nullable<global::System.DateTime> Original_Ngay_lap, string Original_Hinh_thuc_thanh_toan, global::System.Nullable<decimal> Original_Phi_van_chuyen, global::System.Nullable<int> Original_Tong_don_hang, string Original_Tinh_trang_don_hang, string Original_diachi) {
+            if ((id_donhang == null)) {
+                throw new global::System.ArgumentNullException("id_donhang");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Email));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(id_donhang));
             }
-            if ((Ten_quan == null)) {
+            if ((Ngay_lap.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Ngay_lap.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Ten_quan));
-            }
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+            if ((Hinh_thuc_thanh_toan == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p1));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Hinh_thuc_thanh_toan));
             }
-            if ((So_luong_chi_nhanh.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(So_luong_chi_nhanh.Value));
+            if ((Phi_van_chuyen.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Phi_van_chuyen.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((So_luong_don_hang_dk.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(So_luong_don_hang_dk.Value));
+            if ((Tong_don_hang.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Tong_don_hang.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(So_dien_thoai));
-            if ((Ma_doi_tac == null)) {
-                throw new global::System.ArgumentNullException("Ma_doi_tac");
+            if ((Tinh_trang_don_hang == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Ma_doi_tac));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Tinh_trang_don_hang));
             }
-            if ((tentaikhoan == null)) {
-                throw new global::System.ArgumentNullException("tentaikhoan");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(tentaikhoan));
-            }
-            if ((Ten_Ngan_hang == null)) {
-                throw new global::System.ArgumentNullException("Ten_Ngan_hang");
+            if ((diachi == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Ten_Ngan_hang));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(diachi));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(So_tai_khoan));
-            if ((Original_Email == null)) {
-                throw new global::System.ArgumentNullException("Original_Email");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Email));
-            }
-            if ((Original_Ten_quan == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            if ((Original_id_donhang == null)) {
+                throw new global::System.ArgumentNullException("Original_id_donhang");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Ten_quan));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_id_donhang));
             }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+            if ((Original_Ngay_lap.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Ngay_lap.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(p2));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_So_luong_chi_nhanh.HasValue == true)) {
+            if ((Original_Hinh_thuc_thanh_toan == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Hinh_thuc_thanh_toan));
+            }
+            if ((Original_Phi_van_chuyen.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_Phi_van_chuyen.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Tong_don_hang.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_So_luong_chi_nhanh.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Tong_don_hang.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            if ((Original_So_luong_don_hang_dk.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_So_luong_don_hang_dk.Value));
-            }
-            else {
+            if ((Original_Tinh_trang_don_hang == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((decimal)(Original_So_dien_thoai));
-            if ((Original_Ma_doi_tac == null)) {
-                throw new global::System.ArgumentNullException("Original_Ma_doi_tac");
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Tinh_trang_don_hang));
+            }
+            if ((Original_diachi == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Ma_doi_tac));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_diachi));
             }
-            if ((Original_tentaikhoan == null)) {
-                throw new global::System.ArgumentNullException("Original_tentaikhoan");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_tentaikhoan));
-            }
-            if ((Original_Ten_Ngan_hang == null)) {
-                throw new global::System.ArgumentNullException("Original_Ten_Ngan_hang");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Ten_Ngan_hang));
-            }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_So_tai_khoan));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1468,27 +1290,8 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Email, 
-                    string Ten_quan, 
-                    string p1, 
-                    global::System.Nullable<int> So_luong_chi_nhanh, 
-                    global::System.Nullable<int> So_luong_don_hang_dk, 
-                    decimal So_dien_thoai, 
-                    string tentaikhoan, 
-                    string Ten_Ngan_hang, 
-                    decimal So_tai_khoan, 
-                    string Original_Email, 
-                    string Original_Ten_quan, 
-                    string p2, 
-                    global::System.Nullable<int> Original_So_luong_chi_nhanh, 
-                    global::System.Nullable<int> Original_So_luong_don_hang_dk, 
-                    decimal Original_So_dien_thoai, 
-                    string Original_Ma_doi_tac, 
-                    string Original_tentaikhoan, 
-                    string Original_Ten_Ngan_hang, 
-                    decimal Original_So_tai_khoan) {
-            return this.Update(Email, Ten_quan, p1, So_luong_chi_nhanh, So_luong_don_hang_dk, So_dien_thoai, Original_Ma_doi_tac, tentaikhoan, Ten_Ngan_hang, So_tai_khoan, Original_Email, Original_Ten_quan, p2, Original_So_luong_chi_nhanh, Original_So_luong_don_hang_dk, Original_So_dien_thoai, Original_Ma_doi_tac, Original_tentaikhoan, Original_Ten_Ngan_hang, Original_So_tai_khoan);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Ngay_lap, string Hinh_thuc_thanh_toan, global::System.Nullable<decimal> Phi_van_chuyen, global::System.Nullable<int> Tong_don_hang, string Tinh_trang_don_hang, string diachi, string Original_id_donhang, global::System.Nullable<global::System.DateTime> Original_Ngay_lap, string Original_Hinh_thuc_thanh_toan, global::System.Nullable<decimal> Original_Phi_van_chuyen, global::System.Nullable<int> Original_Tong_don_hang, string Original_Tinh_trang_don_hang, string Original_diachi) {
+            return this.Update(Original_id_donhang, Ngay_lap, Hinh_thuc_thanh_toan, Phi_van_chuyen, Tong_don_hang, Tinh_trang_don_hang, diachi, Original_id_donhang, Original_Ngay_lap, Original_Hinh_thuc_thanh_toan, Original_Phi_van_chuyen, Original_Tong_don_hang, Original_Tinh_trang_don_hang, Original_diachi);
         }
     }
     
@@ -1504,7 +1307,7 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         
         private UpdateOrderOption _updateOrder;
         
-        private DOI_TACTableAdapter _dOI_TACTableAdapter;
+        private DON_HANGTableAdapter _dON_HANGTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1526,12 +1329,12 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DOI_TACTableAdapter DOI_TACTableAdapter {
+        public DON_HANGTableAdapter DON_HANGTableAdapter {
             get {
-                return this._dOI_TACTableAdapter;
+                return this._dON_HANGTableAdapter;
             }
             set {
-                this._dOI_TACTableAdapter = value;
+                this._dON_HANGTableAdapter = value;
             }
         }
         
@@ -1554,9 +1357,9 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._dOI_TACTableAdapter != null) 
-                            && (this._dOI_TACTableAdapter.Connection != null))) {
-                    return this._dOI_TACTableAdapter.Connection;
+                if (((this._dON_HANGTableAdapter != null) 
+                            && (this._dON_HANGTableAdapter.Connection != null))) {
+                    return this._dON_HANGTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1571,7 +1374,7 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._dOI_TACTableAdapter != null)) {
+                if ((this._dON_HANGTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1585,12 +1388,12 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(DOANDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dOI_TACTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DOI_TAC.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._dON_HANGTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DON_HANG.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._dOI_TACTableAdapter.Update(updatedRows));
+                    result = (result + this._dON_HANGTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1604,11 +1407,11 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(DOANDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dOI_TACTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DOI_TAC.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._dON_HANGTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DON_HANG.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._dOI_TACTableAdapter.Update(addedRows));
+                    result = (result + this._dON_HANGTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1622,11 +1425,11 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(DOANDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._dOI_TACTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DOI_TAC.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._dON_HANGTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DON_HANG.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._dOI_TACTableAdapter.Update(deletedRows));
+                    result = (result + this._dON_HANGTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1669,8 +1472,8 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._dOI_TACTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dOI_TACTableAdapter.Connection) == false))) {
+            if (((this._dON_HANGTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._dON_HANGTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1706,13 +1509,13 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._dOI_TACTableAdapter != null)) {
-                    revertConnections.Add(this._dOI_TACTableAdapter, this._dOI_TACTableAdapter.Connection);
-                    this._dOI_TACTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dOI_TACTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dOI_TACTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dOI_TACTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dOI_TACTableAdapter.Adapter);
+                if ((this._dON_HANGTableAdapter != null)) {
+                    revertConnections.Add(this._dON_HANGTableAdapter, this._dON_HANGTableAdapter.Connection);
+                    this._dON_HANGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._dON_HANGTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._dON_HANGTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._dON_HANGTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._dON_HANGTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1773,9 +1576,9 @@ SELECT Email, [Ten quan], [Thanh pho/Quan], [So luong chi nhanh], [So luong don 
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._dOI_TACTableAdapter != null)) {
-                    this._dOI_TACTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dOI_TACTableAdapter]));
-                    this._dOI_TACTableAdapter.Transaction = null;
+                if ((this._dON_HANGTableAdapter != null)) {
+                    this._dON_HANGTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dON_HANGTableAdapter]));
+                    this._dON_HANGTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

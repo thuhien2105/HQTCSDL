@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +27,9 @@ namespace GiaoDien
 
         private void btnTiepTuc_Click(object sender, EventArgs e)
         {
+            label3.Show();
+            lblTrangThai.Show();
+            button2.Show();
             DataRowView row = (DataRowView)cbbMaDonHang.SelectedItem;
             id_donhang = (String)row.Row["id_donhang"];
 
@@ -39,10 +43,14 @@ namespace GiaoDien
             {     
                 lblTrangThai.Text = reader["Tinh trang don hang"].ToString();
             }
+
         }
 
         private void Form6_Load(object sender, EventArgs e)
         {
+            label3.Hide();
+            lblTrangThai.Hide();
+            button2.Hide();
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataAdapter adapter = new SqlDataAdapter("exec donhang_dangduocthuchien '"+id_khachhang+"'", connection);
             DataTable table = new DataTable();
@@ -51,11 +59,13 @@ namespace GiaoDien
             cbbMaDonHang.DisplayMember = "id_donhang";
             cbbMaDonHang.DataSource = table;
             cbbMaDonHang.SelectedIndex = -1;
+
         }
 
         private void btnTroVe_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
+            form2.id_khachhang = id_khachhang;
             form2.Show();
             this.Hide();
         }
@@ -71,9 +81,11 @@ namespace GiaoDien
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
             SqlDataReader reader = _command.ExecuteReader();
+
             Form2 form2 = new Form2();
             form2.Show();
             this.Close();
         }
+
     }
 }

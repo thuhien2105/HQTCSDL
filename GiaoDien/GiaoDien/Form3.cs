@@ -27,6 +27,8 @@ namespace GiaoDien
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dOANDataSet1.DOI_TAC' table. You can move, or remove it, as needed.
+            this.dOI_TACTableAdapter.Fill(this.dOANDataSet1.DOI_TAC);
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataAdapter adapter = new SqlDataAdapter("select * from [DOI TAC]", connection);
             DataTable table = new DataTable();
@@ -40,6 +42,7 @@ namespace GiaoDien
             //setGridViewEditable(false);
 
             dataGridView1.DataSource = table;
+            //Bước 5: Đóng kết nối
 
         }
 

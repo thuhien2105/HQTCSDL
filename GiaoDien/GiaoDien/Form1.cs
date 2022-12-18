@@ -54,7 +54,6 @@ namespace GiaoDien
             {
                 MessageBox.Show("Đăng nhập thành công");
                 string loaitaikhoan = reader["loaitaikhoan"].ToString();
-                MessageBox.Show(loaitaikhoan);
                 if (loaitaikhoan=="Khach hang")
                 {
                     //lay id_khachhang
@@ -70,7 +69,6 @@ namespace GiaoDien
                 {
                     //lay id_taixe 
                     String id_taixe = reader["MaTX"].ToString();
-                    MessageBox.Show(id_taixe);
                     //vao form trang chu cua khach hang
                     Form10 form10 = new Form10();
                     form10.id_taixe = id_taixe;
@@ -80,9 +78,9 @@ namespace GiaoDien
             }
             else
                 MessageBox.Show("Not found !!!");
-            reader.Close();
+            //reader.Close();
             //Bước 5: Đóng kết nối
-            _connection.Close();
+            //_connection.Close();
 
         }
 
