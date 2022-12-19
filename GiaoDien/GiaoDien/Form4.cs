@@ -140,6 +140,7 @@ namespace GiaoDien
 
             Form2 form2= new Form2();
             form2.Show();
+            form2.id_khachhang = id_khachhang;
             this.Close();
         }
 
@@ -151,8 +152,7 @@ namespace GiaoDien
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
             SqlDataReader reader = _command.ExecuteReader();
-            reader.Close();
-            _connection.Close();
+
             Form5 form5= new Form5();
             form5.id_donhang = id_donhang;
             if (reader.Read())

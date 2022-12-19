@@ -37,33 +37,36 @@ namespace GiaoDien
             this.cbbDSDonHang = new System.Windows.Forms.ComboBox();
             this.btnChonDonHang = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dOANDataSet2 = new GiaoDien.DOANDataSet2();
-            this.dsdonhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsdonhangTableAdapter = new GiaoDien.DOANDataSet2TableAdapters.dsdonhangTableAdapter();
             this.iddonhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hinhThucThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phiVanChuyenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongDonHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tinhTrangDonHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChiNguoiNhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chọn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dsdonhangBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dOANDataSet3 = new GiaoDien.DOANDataSet3();
+            this.dsdonhangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOANDataSet2 = new GiaoDien.DOANDataSet2();
+            this.dsdonhangTableAdapter = new GiaoDien.DOANDataSet2TableAdapters.dsdonhangTableAdapter();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.dsdonhangTableAdapter1 = new GiaoDien.DOANDataSet3TableAdapters.dsdonhangTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsdonhangBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsdonhangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(432, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(95, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -104,31 +107,14 @@ namespace GiaoDien
             this.phiVanChuyenDataGridViewTextBoxColumn,
             this.tongDonHangDataGridViewTextBoxColumn,
             this.tinhTrangDonHangDataGridViewTextBoxColumn,
-            this.diaChiNguoiNhanDataGridViewTextBoxColumn,
-            this.tenDataGridViewTextBoxColumn,
-            this.diaChiDataGridViewTextBoxColumn,
             this.chọn});
-            this.dataGridView1.DataSource = this.dsdonhangBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 299);
+            this.dataGridView1.DataSource = this.dsdonhangBindingSource1;
+            this.dataGridView1.Location = new System.Drawing.Point(37, 273);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(950, 237);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // dOANDataSet2
-            // 
-            this.dOANDataSet2.DataSetName = "DOANDataSet2";
-            this.dOANDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dsdonhangBindingSource
-            // 
-            this.dsdonhangBindingSource.DataMember = "dsdonhang";
-            this.dsdonhangBindingSource.DataSource = this.dOANDataSet2;
-            // 
-            // dsdonhangTableAdapter
-            // 
-            this.dsdonhangTableAdapter.ClearBeforeFill = true;
             // 
             // iddonhangDataGridViewTextBoxColumn
             // 
@@ -178,30 +164,6 @@ namespace GiaoDien
             this.tinhTrangDonHangDataGridViewTextBoxColumn.Name = "tinhTrangDonHangDataGridViewTextBoxColumn";
             this.tinhTrangDonHangDataGridViewTextBoxColumn.Width = 150;
             // 
-            // diaChiNguoiNhanDataGridViewTextBoxColumn
-            // 
-            this.diaChiNguoiNhanDataGridViewTextBoxColumn.DataPropertyName = "Dia chi nguoi nhan";
-            this.diaChiNguoiNhanDataGridViewTextBoxColumn.HeaderText = "Dia chi nguoi nhan";
-            this.diaChiNguoiNhanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.diaChiNguoiNhanDataGridViewTextBoxColumn.Name = "diaChiNguoiNhanDataGridViewTextBoxColumn";
-            this.diaChiNguoiNhanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // tenDataGridViewTextBoxColumn
-            // 
-            this.tenDataGridViewTextBoxColumn.DataPropertyName = "Ten";
-            this.tenDataGridViewTextBoxColumn.HeaderText = "Ten";
-            this.tenDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
-            this.tenDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // diaChiDataGridViewTextBoxColumn
-            // 
-            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "Dia chi";
-            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Dia chi";
-            this.diaChiDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
-            this.diaChiDataGridViewTextBoxColumn.Width = 150;
-            // 
             // chọn
             // 
             this.chọn.DataPropertyName = "id_donhang";
@@ -210,15 +172,53 @@ namespace GiaoDien
             this.chọn.Name = "chọn";
             this.chọn.Width = 150;
             // 
+            // dsdonhangBindingSource1
+            // 
+            this.dsdonhangBindingSource1.DataMember = "dsdonhang";
+            this.dsdonhangBindingSource1.DataSource = this.dOANDataSet3;
+            // 
+            // dOANDataSet3
+            // 
+            this.dOANDataSet3.DataSetName = "DOANDataSet3";
+            this.dOANDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsdonhangBindingSource
+            // 
+            this.dsdonhangBindingSource.DataMember = "dsdonhang";
+            this.dsdonhangBindingSource.DataSource = this.dOANDataSet2;
+            // 
+            // dOANDataSet2
+            // 
+            this.dOANDataSet2.DataSetName = "DOANDataSet2";
+            this.dOANDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsdonhangTableAdapter
+            // 
+            this.dsdonhangTableAdapter.ClearBeforeFill = true;
+            // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(471, 546);
+            this.btnThoat.Location = new System.Drawing.Point(456, 531);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(114, 42);
+            this.btnThoat.Size = new System.Drawing.Size(150, 57);
             this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // dsdonhangTableAdapter1
+            // 
+            this.dsdonhangTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(414, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(216, 42);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "LỊCH SỬ ĐƠN HÀNG";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form10
             // 
@@ -226,6 +226,7 @@ namespace GiaoDien
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1029, 600);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnChonDonHang);
@@ -239,8 +240,10 @@ namespace GiaoDien
             this.Load += new System.EventHandler(this.Form10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsdonhangBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsdonhangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,13 +261,14 @@ namespace GiaoDien
         private DataGridViewTextBoxColumn phiVanChuyenDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tongDonHangDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tinhTrangDonHangDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn diaChiNguoiNhanDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tenDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
         private BindingSource dsdonhangBindingSource;
         private DOANDataSet2 dOANDataSet2;
         private DOANDataSet2TableAdapters.dsdonhangTableAdapter dsdonhangTableAdapter;
         private DataGridViewButtonColumn chọn;
         private Button btnThoat;
+        private BindingSource dsdonhangBindingSource1;
+        private DOANDataSet3 dOANDataSet3;
+        private DOANDataSet3TableAdapters.dsdonhangTableAdapter dsdonhangTableAdapter1;
+        private Button button1;
     }
 }

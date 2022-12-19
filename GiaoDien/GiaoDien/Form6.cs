@@ -83,6 +83,7 @@ namespace GiaoDien
             SqlDataReader reader = _command.ExecuteReader();
 
             Form2 form2 = new Form2();
+            form2.id_khachhang = id_khachhang;
             form2.Show();
             this.Close();
         }

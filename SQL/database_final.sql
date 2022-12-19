@@ -47,6 +47,7 @@ create table "CHI NHANH" (
    RateTB float,
    tentaikhoan          char(50)            ,
    id_khuvuc char(10),
+   sdt numeric(10,0),
    constraint "PK_CHI NHANH" primary key  (id_chinhanh, "Ma doi tac")
 )
 go
@@ -79,6 +80,14 @@ create table "DOI TAC" (
    "So tai khoan"       numeric(20)         not null,
    constraint "PK_DOI TAC" primary key  ("Ma doi tac")
 )
+--tính theo ngày
+create table "DOANH THU DOI TAC"(
+	id_doitac char(10) not null, 
+	ngay date not null,
+	doanhthu int,
+	soluongdonhang int,
+	constraint "PK_DOANH THU DOI TAC" primary key  (id_doitac, ngay)
+)
 go
 create table "DON HANG" (
    id_donhang           char(10)           not null,
@@ -92,7 +101,7 @@ create table "DON HANG" (
    "Tong don hang"    int                  ,
    "Tinh trang don hang"  nvarchar(256)  ,
    id_khuvuc char(10),
-   diachi nvarchar(256) ,
+   diachi nvarchar(256),
    constraint "PK_DON HANG" primary key (id_donhang asc) 
    WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 )  ON [PRIMARY] 
@@ -285,3 +294,7 @@ alter table "CT DON HANG"
 		references "DON HANG"(id_donhang) ON DELETE CASCADE,
 	 constraint "FK_CT DON HANG_THUC DON" foreign key("Ten mon", id_doitac, id_chinhanh)
 		references "THUC DON"("Ten mon","Ma doi tac","Ma chi nhanh")
+
+alter table "DOANH THU DOI TAC"
+	add constraint "FK_DOANH THU DOI TAC_DOI TAC" foreign key(id_doitac)
+		references "DOI TAC"("Ma doi tac") ON DELETE CASCADE

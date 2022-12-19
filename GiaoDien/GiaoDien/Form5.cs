@@ -19,6 +19,7 @@ namespace GiaoDien
         String connectionString = "";
         public String tongdonhang;
         public String phivanchuyen;
+        public string id_khachhang;
         public Form5()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace GiaoDien
             SqlDataReader reader = _command.ExecuteReader();
 
             Form2 form2 = new Form2();
+            form2.id_khachhang = id_khachhang;
             form2.Show();
             this.Hide();    
         }
@@ -66,6 +68,7 @@ namespace GiaoDien
             SqlDataReader reader = _command.ExecuteReader();
 
             Form2 form2 = new Form2();
+            form2.id_khachhang = id_khachhang;
             form2.Show();
             this.Close();
         }

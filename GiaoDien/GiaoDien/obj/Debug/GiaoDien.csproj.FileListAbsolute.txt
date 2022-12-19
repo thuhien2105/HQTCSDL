@@ -92,3 +92,5 @@ D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form6.resources
 D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form7.resources
 D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form8.resources
 D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form9.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form10_1.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form10_2.resources
