@@ -217,13 +217,6 @@ alter table "CHI NHANH"
       references "KHU VUC" (id_khuvuc)
 
 
-alter table "DON HANG"
-   add constraint "FK_DON HANG_TIẾP NHẬN_TAI XE" foreign key (MaTX)
-      references "TAI XE" (MaTX),
-	 constraint "FK_DON HANG_XÁC NHẬN_KHACH HANG" foreign key (MaKH)
-      references "KHACH HANG" (MaKH),
-	constraint "FK_DON HANG_ĐẶT TẠI_CHI NHANH" foreign key (id_chinhanh, id_doitac)
-      references "CHI NHANH" (id_chinhanh, "Ma doi tac" )
 go
 
 alter table "HOP DONG"
@@ -275,16 +268,19 @@ alter table "TAI XE"
       references "NHAN VIEN" (id_nhanvien)
 go
 alter table "DON HANG"
-   add constraint "FK_DONHANG_KHU VUC" foreign key (id_khuvuc)
-      references "KHU VUC" (id_khuvuc),
-	constraint "FK_DON HANG_KHU VUC" foreign key (id_khuvuc)
-      references "KHU VUC"(id_khuvuc) 
-go
+	add constraint "FK_DON HANG_CHI NHANH" foreign key(id_chinhanh, id_doitac)
+		references "CHI NHANH"(id_chinhanh, "Ma doi tac") ,
+	constraint "FK_DON HANG_tai xe" foreign key(MaTX)
+		references "TAI XE"(MaTX),
+	constraint "FK_DON HANG_KHACH HANG" foreign key(MaKH)
+		references "KHACH HANG"(MaKH),
+	constraint "FK_DON HANG_KHU VUC" foreign key(id_khuvuc)
+		references "KHU VUC"(id_khuvuc)
 
 
 alter table "THUC DON" 
-   add constraint "FK_THUC DON_DOI TAC" foreign key ("Ma doi tac")
-      references "DOI TAC"("Ma doi tac"),
+   add constraint "FK_THUC DON_CHI NHANH" foreign key ("Ma doi tac","Ma chi nhanh")
+      references "CHI NHANH"("Ma doi tac", id_chinhanh)ON DELETE CASCADE,
 	constraint "FK_THUC DON_LOAI AM THUC" foreign key ("Loai am thuc")
       references "LOAI AM THUC"(id_amthuc) 
 go 
