@@ -75,6 +75,17 @@ namespace GiaoDien
                     form10.Show();
                     this.Hide();
                 }
+                else if (loaitaikhoan == "Nhan vien")
+                {
+                    //lay id_taixe 
+                    String id_nhanvien = reader["id_nhanvien"].ToString();
+                    MessageBox.Show(id_nhanvien);
+                    //vao form trang chu cua khach hang
+                    Form18 form18 = new Form18();
+                    form18.id_nhanvien = id_nhanvien;
+                    form18.Show();
+                    this.Hide();
+                }
             }
             else
                 MessageBox.Show("Not found !!!");
@@ -104,9 +115,6 @@ namespace GiaoDien
             this.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }

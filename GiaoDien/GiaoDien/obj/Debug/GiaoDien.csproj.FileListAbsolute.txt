@@ -103,3 +103,9 @@ C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\Gia
 C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form13.resources
 C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form14.resources
 C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form16.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form12.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form13.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form14.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form15.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form16.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form19.resources

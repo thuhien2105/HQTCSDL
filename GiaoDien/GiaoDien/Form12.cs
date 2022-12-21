@@ -51,6 +51,9 @@ namespace GiaoDien
             _connection.Close();
         }
 
-       
+        private void Form12_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

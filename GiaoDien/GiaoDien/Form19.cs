@@ -16,5 +16,13 @@ namespace GiaoDien
         {
             InitializeComponent();
         }
+        public String id_nhanvien;
+        public String id_doitac;
+        public String masothue;
+        public String email;
+        private void Form19_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

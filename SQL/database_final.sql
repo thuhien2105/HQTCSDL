@@ -13,7 +13,7 @@ create table "THUC DON" (
 	"Ten mon" nvarchar(80) not null,
 	"Ma doi tac"    char(10)    not null,
 	"Ma chi nhanh" char(10) not null,
-	Gia money not null,
+	Gia int not null,
 	"Mieu ta" nvarchar(256),
 	"Tinh trang mon an" nvarchar(256),
 	RateTB float,
@@ -38,7 +38,7 @@ create table "CHI NHANH" (
    "Dia chi"            nvarchar(50)                 ,
    "Thoi gian mo cua"   time             ,
    "Thoi gian dong cua" time             ,
-   "Doanh thu thang"  money               ,
+   "Doanh thu thang"  int               ,
    Ten                  nvarchar(256)      ,
    "Tinh trang"  nvarchar(256)      ,
    "Thoi gian doi ten lan cuoi" datetime,
@@ -78,6 +78,7 @@ create table "DOI TAC" (
    tentaikhoan          char(50)                not null ,
    "Ten Ngan hang"      nvarchar(10)                 not null,
    "So tai khoan"       numeric(20)         not null,
+   ratetb float,
    constraint "PK_DOI TAC" primary key  ("Ma doi tac")
 )
 --tính theo ngày
@@ -97,7 +98,7 @@ create table "DON HANG" (
    MaKH                 char(10)            not null,
    "Ngay lap"           datetime             ,
    "Hinh thuc thanh toan" nvarchar(50)         ,
-   "Phi van chuyen"   money                  ,
+   "Phi van chuyen"   int                  ,
    "Tong don hang"    int                  ,
    "Tinh trang don hang"  nvarchar(256)  ,
    id_khuvuc char(10),
@@ -112,9 +113,10 @@ create table "HOP DONG" (
    id_nđd               char(10)            not null,
    "Ngay lap"           datetime             ,
    "Ma so thue"         char(10)            ,
-   "Phan tram hoa hong" money               ,
+   "Phan tram hoa hong" int           ,
    "Thoi gian het hieu luc" datetime             ,
-   "Phi kich hoat"      money             ,
+   "Phi kich hoat"      int            ,
+   tinhtrang nvarchar(50),
    constraint "PK_HOP DONG" primary key  (id_hopdong)
 )
 go
@@ -184,7 +186,7 @@ create table "TAI XE" (
    "Dia chi"            nvarchar(50)                 ,
    "Bien so xe"         char(50)                 ,
    Email                char(50)               unique  ,
-   "Phi thue chan"      money               ,
+   "Phi thue chan"     int            ,
    "Ho ten"             nvarchar(50)                 ,
    MaTX                 char(10)            not null,
    id_khuvuc            char(10)            not null,
@@ -197,6 +199,8 @@ create table "TAI XE" (
 
 go
 
+
+
 alter table "BANG DANH GIA"
    add constraint "FK_BANG DANH GIA_CHI NHANH" foreign key (id_chinhanh, id_doitac)
       references "CHI NHANH" (id_chinhanh, "Ma doi tac") ON DELETE CASCADE,
@@ -208,20 +212,29 @@ go
 
 alter table "CHI NHANH"
    add constraint "FK_CHI NHANH_DOI TAC" foreign key ("Ma doi tac")
-      references "DOI TAC" ("Ma doi tac"),
+      references "DOI TAC" ("Ma doi tac") ON DELETE CASCADE,
 	constraint "FK_CHINHANH_BELONG2_TAI KHOA" foreign key (tentaikhoan)
-      references "TAI KHOAN" (tentaikhoan),
+      references "TAI KHOAN" (tentaikhoan) ,
 	constraint "FK_CHI NHANH_CÓ_TAI KHOA" foreign key ("Ten Ngan hang", "So tai khoan")
-      references "TAI KHOAN NGAN HANG" ("Ten Ngan hang", "So tai khoan"),
+      references "TAI KHOAN NGAN HANG" ("Ten Ngan hang", "So tai khoan") ,
 	constraint "FK_CHI NHANH_KHU VUC" foreign key (id_khuvuc)
       references "KHU VUC" (id_khuvuc)
 
 
+alter table "DON HANG"
+   add constraint "FK_DON HANG_TIẾP NHẬN_TAI XE" foreign key (MaTX)
+      references "TAI XE" (MaTX),
+	 constraint "FK_DON HANG_XÁC NHẬN_KHACH HANG" foreign key (MaKH)
+      references "KHACH HANG" (MaKH),
+	constraint "FK_DON HANG_ĐẶT TẠI_CHI NHANH" foreign key (id_chinhanh, id_doitac)
+      references "CHI NHANH" (id_chinhanh, "Ma doi tac" ),
+	constraint "FK_DONHANG_KHU VUC" foreign key (id_khuvuc)
+      references "KHU VUC" (id_khuvuc)
 go
 
 alter table "HOP DONG"
    add constraint "FK_HOP DONG_KÍ XÁC NH_NGUOI DAI DIEN" foreign key (id_nđd)
-      references "NGUOI DAI DIEN" (id_nđd),
+      references "NGUOI DAI DIEN" (id_nđd) ON DELETE CASCADE,
 	constraint "FK_HOP DONG_XÁC NHẬN _NHAN VIEN" foreign key (id_nhanvien)
       references "NHAN VIEN" (id_nhanvien)
 go
@@ -267,20 +280,10 @@ alter table "TAI XE"
 	constraint "FK_TAI XE_ĐĂNG KÝ_NHAN VIE" foreign key (id_nhanvien)
       references "NHAN VIEN" (id_nhanvien)
 go
-alter table "DON HANG"
-	add constraint "FK_DON HANG_CHI NHANH" foreign key(id_chinhanh, id_doitac)
-		references "CHI NHANH"(id_chinhanh, "Ma doi tac") ,
-	constraint "FK_DON HANG_tai xe" foreign key(MaTX)
-		references "TAI XE"(MaTX),
-	constraint "FK_DON HANG_KHACH HANG" foreign key(MaKH)
-		references "KHACH HANG"(MaKH),
-	constraint "FK_DON HANG_KHU VUC" foreign key(id_khuvuc)
-		references "KHU VUC"(id_khuvuc)
-
 
 alter table "THUC DON" 
-   add constraint "FK_THUC DON_CHI NHANH" foreign key ("Ma doi tac","Ma chi nhanh")
-      references "CHI NHANH"("Ma doi tac", id_chinhanh)ON DELETE CASCADE,
+   add constraint "FK_THUC DON_CHI NHANH" foreign key ("Ma chi nhanh", "Ma doi tac")
+      references "CHI NHANH"(id_chinhanh, "Ma doi tac") ON DELETE CASCADE,
 	constraint "FK_THUC DON_LOAI AM THUC" foreign key ("Loai am thuc")
       references "LOAI AM THUC"(id_amthuc) 
 go 
@@ -289,8 +292,6 @@ alter table "CT DON HANG"
 	add constraint "FK_CT DON HANG_DON HANG" foreign key(id_donhang)
 		references "DON HANG"(id_donhang) ON DELETE CASCADE,
 	 constraint "FK_CT DON HANG_THUC DON" foreign key("Ten mon", id_doitac, id_chinhanh)
-		references "THUC DON"("Ten mon","Ma doi tac","Ma chi nhanh")
+		references "THUC DON"("Ten mon","Ma doi tac","Ma chi nhanh") ON DELETE CASCADE
 
-alter table "DOANH THU DOI TAC"
-	add constraint "FK_DOANH THU DOI TAC_DOI TAC" foreign key(id_doitac)
-		references "DOI TAC"("Ma doi tac") ON DELETE CASCADE
+
