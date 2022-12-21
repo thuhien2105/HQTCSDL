@@ -73,6 +73,7 @@
             this.chỉnhSửaThôngTinToolStripMenuItem.Name = "chỉnhSửaThôngTinToolStripMenuItem";
             this.chỉnhSửaThôngTinToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.chỉnhSửaThôngTinToolStripMenuItem.Text = "Chỉnh sửa thông tin";
+            this.chỉnhSửaThôngTinToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaThôngTinToolStripMenuItem_Click);
             // 
             // quảnLíToolStripMenuItem
             // 
@@ -89,18 +90,21 @@
             this.quảnLíDToolStripMenuItem.Name = "quảnLíDToolStripMenuItem";
             this.quảnLíDToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.quảnLíDToolStripMenuItem.Text = "Quản lí doanh thu";
+            this.quảnLíDToolStripMenuItem.Click += new System.EventHandler(this.quảnLíDToolStripMenuItem_Click);
             // 
             // quảnLíToolStripMenuItem1
             // 
             this.quảnLíToolStripMenuItem1.Name = "quảnLíToolStripMenuItem1";
             this.quảnLíToolStripMenuItem1.Size = new System.Drawing.Size(210, 26);
             this.quảnLíToolStripMenuItem1.Text = "Quản lí chi nhánh";
+            this.quảnLíToolStripMenuItem1.Click += new System.EventHandler(this.quảnLíToolStripMenuItem1_Click);
             // 
             // quảnLíThựcĐơnToolStripMenuItem
             // 
             this.quảnLíThựcĐơnToolStripMenuItem.Name = "quảnLíThựcĐơnToolStripMenuItem";
             this.quảnLíThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.quảnLíThựcĐơnToolStripMenuItem.Text = "Quản lí thực đơn";
+            this.quảnLíThựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLíThựcĐơnToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -203,6 +207,7 @@
             this.Name = "Form11";
             this.RightToLeftLayout = true;
             this.Text = "Đối Tác";
+            this.Load += new System.EventHandler(this.Form11_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

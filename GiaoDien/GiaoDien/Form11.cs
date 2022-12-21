@@ -21,5 +21,35 @@ namespace GiaoDien
         {
 
         }
+
+        private void chỉnhSửaThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form12 f=new Form12();
+            f.Show();
+
+        }
+
+        private void quảnLíDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form13 f=new Form13();
+            f.Show();
+        }
+
+        private void quảnLíToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form14 f=new Form14();
+            f.Show();
+        }
+
+        private void quảnLíThựcĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form15 f=new Form15();
+            f.Show();
+        }
+
+        private void Form11_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

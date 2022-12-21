@@ -16,5 +16,12 @@ namespace GiaoDien
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form16 f=new Form16();
+            f.Show();
+
+        }
     }
 }
