@@ -775,3 +775,22 @@ begin
 	rollback
 	select* from [THUC DON]  where [Ma doi tac] = @iddt and [Ma chi nhanh] = @idcn
 end 
+
+create proc updateThongtin 
+@ttk char(50),
+@email char(50),
+@dc nvarchar(20),
+@sdt numeric(10),
+@tennh nvarchar(10),
+@stk numeric(20),
+@id char(10)
+as 
+begin
+	if (@ttk is null) or (@email is null) or(@dc is null) or (@sdt is null) or (@tennh is null) or (@stk is null ) or (@id is null) 
+	begin
+		rollback
+	end
+	update "DOI TAC" 
+	set tentaikhoan = @ttk , Email= @email , [Thanh pho/Quan]= @dc , [So dien thoai]=@sdt , [Ten ngan hang]=@tennh , [So tai khoan]=@stk
+	where @id=[Ma doi tac]
+end
