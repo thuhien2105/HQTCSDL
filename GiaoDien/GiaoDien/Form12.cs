@@ -16,6 +16,7 @@ namespace GiaoDien
 {
     public partial class Form12 : Form
     {
+        public String id_doitac;
         SqlConnection _connection = null;
         SqlCommand _command = null;
         String _connectionString = "";
@@ -34,12 +35,11 @@ namespace GiaoDien
             String sdt = this.textBox4.Text;
             String tnh = this.textBox5.Text;
             String stk = this.textBox6.Text;
-            String id = this.textBox7.Text;
 
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
 
-            String sql = "Update [DOI TAC] set tentaikhoan = '" + ttk + "', Email ='" + email + "',[Thanh pho/Quan] =N'" + dc + "',[So dien thoai] ='" + sdt + "',[Ten Ngan hang] ='" + tnh + "',[So tai khoan] = '" + stk + "' where [Ma doi tac] = '" + id + "' ";
+            String sql = "Update [DOI TAC] set tentaikhoan = '" + ttk + "', Email ='" + email + "',[Thanh pho/Quan] =N'" + dc + "',[So dien thoai] ='" + sdt + "',[Ten Ngan hang] ='" + tnh + "',[So tai khoan] = '" + stk + "' where [Ma doi tac] = '" + id_doitac + "' ";
             _command = new SqlCommand(sql, _connection);
             _command.Connection = _connection;
             int n = _command.ExecuteNonQuery();

@@ -17,6 +17,7 @@ namespace GiaoDien
         SqlConnection _connection = null;
         SqlCommand _command = null;
         String _connectionString = "";
+        public String id_doitac;
         public Form16()
         {
             InitializeComponent();

@@ -673,3 +673,105 @@ as
 	end try
 	begin catch
 	end catch 
+
+create proc updateChinhanh
+@tencn char(10),
+@dc nvarchar(50),
+@tgm time,
+@tgd time,
+@id char(10),
+@iddt char(10)
+as 
+begin
+	if (@tencn is null) or (@dc is null) or(@tgm is null) or (@tgd is null) or (@id is null) 
+	begin
+		rollback
+	end
+	update [CHI NHANH]
+	set Ten=@tencn,[Dia chi]=@dc,[Thoi gian mo cua]=@tgm,[Thoi gian dong cua]=@tgd
+	where @id=id_chinhanh and [Ma doi tac]=@iddt
+end
+
+create proc themChinhanh
+@id char(10),
+@madt char(10),
+@tennh nvarchar(10),
+@stk numeric(20),
+@tgm time,
+@tgd time
+as 
+begin
+	if (@id is null) or (@madt is null) or(@tgm is null) or (@tgd is null) or (@tennh is null) or (@stk is null)
+	begin
+		rollback
+	end
+	insert into [CHI NHANH](id_chinhanh,[Ma doi tac],[Ten Ngan hang],[So tai khoan],[Thoi gian dong cua],[Thoi gian dong cua])
+	values(@id,@madt,@tennh,@stk,@tgm,@tgd)
+end
+
+create proc updateMonan
+@mieuta nvarchar(50),
+@gia money,
+@tinhtrang nvarchar(50),
+@tenmon nvarchar(50)
+as
+begin
+	if (@mieuta is null) or (@gia is null) or(@tinhtrang is null) or (@tenmon is null)
+	begin
+		rollback
+	end
+	update [THUC DON] 
+	set [Mieu ta]=@mieuta,Gia=@gia,[Tinh trang mon an]=@tinhtrang
+	where @tenmon=[Ten mon]
+end
+
+create proc themMonan
+@tenmon nvarchar(50),
+@madt char(10),
+@macn char(10),
+@gia money,
+@mieuta nvarchar(50),
+@tinhtrang nvarchar(50)
+as
+begin
+	if exists (select*from [THUC DON] where [Ten mon]=@tenmon)
+	rollback
+	if not exists(select*from [THUC DON] where @madt=[Ma doi tac] and @macn=[Ma chi nhanh])
+	rollback
+	if (@mieuta is null) or (@gia is null) or(@tinhtrang is null) or (@tenmon is null) or (@madt is null) or (@macn is null)
+	begin
+		rollback
+	end
+	insert into [THUC DON]([Ten mon],[Ma doi tac],[Ma chi nhanh],Gia,[Mieu ta],[Tinh trang mon an])
+	values(@tenmon,@madt,@macn,@gia,@mieuta,@tinhtrang)
+end
+
+
+create
+--alter
+proc xemDoanhthu
+@iddt char(10),
+@ngaybd date,
+@ngaykt date
+as 
+begin 
+	if (@iddt is null) or (@ngaybd is null) or (@ngaykt is null) 
+	rollback
+	select* from [DOANH THU DOI TAC] dt where dt.id_doitac = @iddt and ngay <= @ngaykt and ngay>= @ngaybd
+end 
+
+
+
+create
+--alter
+proc xemThucDon
+@iddt char(10),
+@idcn char(10)
+as 
+begin 
+	if (@iddt is null)
+	rollback
+	if not exists (select*from [DOI TAC] where [Ma doi tac]=@iddt)
+	rollback
+	select* from [THUC DON]  where [Ma doi tac] = @iddt and [Ma chi nhanh] = @idcn
+end 

@@ -21,7 +21,7 @@ namespace GiaoDien
         {
             InitializeComponent();
             connectionString = @"Data Source=PC\SQLEXPRESS;Initial Catalog=DOAN;Integrated Security=True";
-            dataGridView1.AutoGenerateColumns = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
