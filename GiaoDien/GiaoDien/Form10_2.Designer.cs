@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnTroVe = new System.Windows.Forms.Button();
-            this.dOANDataSet4 = new GiaoDien.DOANDataSet4();
-            this.dsdonhangdanhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsdonhangdanhanTableAdapter = new GiaoDien.DOANDataSet4TableAdapters.dsdonhangdanhanTableAdapter();
             this.iddonhangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hinhThucThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phiVanChuyenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dsdonhangdanhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dOANDataSet4 = new GiaoDien.DOANDataSet4();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnTroVe = new System.Windows.Forms.Button();
+            this.dsdonhangdanhanTableAdapter = new GiaoDien.DOANDataSet4TableAdapters.dsdonhangdanhanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsdonhangdanhanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -53,54 +53,12 @@
             this.hinhThucThanhToanDataGridViewTextBoxColumn,
             this.phiVanChuyenDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dsdonhangdanhanBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 191);
+            this.dataGridView1.Location = new System.Drawing.Point(92, 161);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(997, 370);
+            this.dataGridView1.Size = new System.Drawing.Size(902, 370);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(396, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "LỊCH SỬ ĐƠN HÀNG MÀ TÀI XẾ ĐÃ NHẬN ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(464, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "(Chỉ tính 5 ngày gần nhất)";
-            // 
-            // btnTroVe
-            // 
-            this.btnTroVe.Location = new System.Drawing.Point(490, 585);
-            this.btnTroVe.Name = "btnTroVe";
-            this.btnTroVe.Size = new System.Drawing.Size(173, 49);
-            this.btnTroVe.TabIndex = 3;
-            this.btnTroVe.Text = "TRỜ VỀ";
-            this.btnTroVe.UseVisualStyleBackColor = true;
-            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
-            // 
-            // dOANDataSet4
-            // 
-            this.dOANDataSet4.DataSetName = "DOANDataSet4";
-            this.dOANDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dsdonhangdanhanBindingSource
-            // 
-            this.dsdonhangdanhanBindingSource.DataMember = "dsdonhangdanhan";
-            this.dsdonhangdanhanBindingSource.DataSource = this.dOANDataSet4;
-            // 
-            // dsdonhangdanhanTableAdapter
-            // 
-            this.dsdonhangdanhanTableAdapter.ClearBeforeFill = true;
             // 
             // iddonhangDataGridViewTextBoxColumn
             // 
@@ -126,6 +84,49 @@
             this.phiVanChuyenDataGridViewTextBoxColumn.Name = "phiVanChuyenDataGridViewTextBoxColumn";
             this.phiVanChuyenDataGridViewTextBoxColumn.Width = 150;
             // 
+            // dsdonhangdanhanBindingSource
+            // 
+            this.dsdonhangdanhanBindingSource.DataMember = "dsdonhangdanhan";
+            this.dsdonhangdanhanBindingSource.DataSource = this.dOANDataSet4;
+            // 
+            // dOANDataSet4
+            // 
+            this.dOANDataSet4.DataSetName = "DOANDataSet4";
+            this.dOANDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(372, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(326, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "LỊCH SỬ ĐƠN HÀNG MÀ TÀI XẾ ĐÃ NHẬN ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(430, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "(Chỉ tính 5 ngày gần nhất)";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // btnTroVe
+            // 
+            this.btnTroVe.Location = new System.Drawing.Point(434, 574);
+            this.btnTroVe.Name = "btnTroVe";
+            this.btnTroVe.Size = new System.Drawing.Size(173, 49);
+            this.btnTroVe.TabIndex = 3;
+            this.btnTroVe.Text = "TRỜ VỀ";
+            this.btnTroVe.UseVisualStyleBackColor = true;
+            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
+            // 
+            // dsdonhangdanhanTableAdapter
+            // 
+            this.dsdonhangdanhanTableAdapter.ClearBeforeFill = true;
+            // 
             // Form10_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -139,8 +140,8 @@
             this.Text = "Form10_2";
             this.Load += new System.EventHandler(this.Form10_2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsdonhangdanhanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dOANDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

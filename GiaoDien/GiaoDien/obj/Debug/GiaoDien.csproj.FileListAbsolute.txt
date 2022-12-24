@@ -147,3 +147,4 @@ C:\Users\letuo\Music\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDi
 C:\Users\letuo\Music\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.exe
 C:\Users\letuo\Music\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.pdb
 C:\Users\letuo\OneDrive\Documents\GitHub\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form19.resources
+D:\20127021\HQTCSDL\GiaoDien\GiaoDien\obj\Debug\GiaoDien.Form2_1.resources

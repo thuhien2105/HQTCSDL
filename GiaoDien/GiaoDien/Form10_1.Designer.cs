@@ -120,7 +120,7 @@
             // 
             // btnChuyenDonHang
             // 
-            this.btnChuyenDonHang.Location = new System.Drawing.Point(439, 561);
+            this.btnChuyenDonHang.Location = new System.Drawing.Point(431, 561);
             this.btnChuyenDonHang.Name = "btnChuyenDonHang";
             this.btnChuyenDonHang.Size = new System.Drawing.Size(198, 50);
             this.btnChuyenDonHang.TabIndex = 15;
@@ -212,7 +212,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(207, 561);
+            this.button1.Location = new System.Drawing.Point(175, 561);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 50);
             this.button1.TabIndex = 24;

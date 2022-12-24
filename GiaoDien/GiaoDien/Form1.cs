@@ -79,11 +79,22 @@ namespace GiaoDien
                 {
                     //lay id_taixe 
                     String id_nhanvien = reader["id_nhanvien"].ToString();
-                    MessageBox.Show(id_nhanvien);
+                    //MessageBox.Show(id_nhanvien);
                     //vao form trang chu cua khach hang
                     Form18 form18 = new Form18();
                     form18.id_nhanvien = id_nhanvien;
                     form18.Show();
+                    this.Hide();
+                }
+                else if (loaitaikhoan == "Doi tac")
+                {
+                    //lay id_taixe 
+                    String id_doitac = reader["Ma doi tac"].ToString();
+                    //MessageBox.Show(id_doitac);
+                    //vao form trang chu cua khach hang
+                    Form11 form11 = new Form11();
+                    form11.id_doitac = id_doitac;
+                    form11.Show();
                     this.Hide();
                 }
             }
@@ -115,6 +126,9 @@ namespace GiaoDien
             this.Close();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

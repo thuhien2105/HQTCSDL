@@ -47,7 +47,7 @@ namespace GiaoDien
             Form6 form6=new Form6();
             form6.id_khachhang = id_khachhang;
             form6.Show();
-            this.Hide();
+            this.Close();
 
         }
 
@@ -58,7 +58,7 @@ namespace GiaoDien
             Form8 form8 = new Form8();
             form8.monan = monan;
             form8.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnDanhGia_Click(object sender, EventArgs e)
@@ -66,17 +66,23 @@ namespace GiaoDien
             Form7 form7 = new Form7();
             form7.id_khachhang = id_khachhang;
             form7.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Show();
-            this.Hide();
+            this.Close();
         }
 
-
+        private void btnThongTinChiTiet_Click(object sender, EventArgs e)
+        {
+            Form2_1 form7 = new Form2_1();
+            form7.id_khachhang = id_khachhang;
+            form7.Show();
+            this.Close();
+        }
     }
 
 }

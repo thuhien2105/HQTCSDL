@@ -42,7 +42,7 @@ namespace GiaoDien
             DataTable table = new DataTable();
             adapter.Fill(table);
             cbbChiNhanh.ValueMember = "id_chinhanh";
-            cbbChiNhanh.DisplayMember = "Dia chi";
+            cbbChiNhanh.DisplayMember = "Ten";
             cbbChiNhanh.DataSource = table;
             cbbChiNhanh.SelectedIndex = -1;
 
@@ -155,15 +155,16 @@ namespace GiaoDien
 
             Form5 form5= new Form5();
             form5.id_donhang = id_donhang;
+            form5.id_khachhang = id_khachhang;
             if (reader.Read())
             {
                 form5.tongdonhang = reader["Tong don hang"].ToString();
                 form5.phivanchuyen = reader["Phi van chuyen"].ToString();
             }
             form5.Show();
-            this.Hide();
+            this.Close();
         }
 
-    
+
     }
 }

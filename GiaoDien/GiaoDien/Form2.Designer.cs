@@ -89,6 +89,7 @@
             this.btnThongTinChiTiet.TabIndex = 8;
             this.btnThongTinChiTiet.Text = "Thông tin chi tiết";
             this.btnThongTinChiTiet.UseVisualStyleBackColor = true;
+            this.btnThongTinChiTiet.Click += new System.EventHandler(this.btnThongTinChiTiet_Click);
             // 
             // btnLichSuDonHang
             // 
@@ -364,7 +365,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form2";
             this.Text = "KHÁCH HÀNG";
-
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

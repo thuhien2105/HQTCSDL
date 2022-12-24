@@ -20,8 +20,7 @@ namespace GiaoDien
         public Form13()
         {
             InitializeComponent();
-            connectionString = @"Data Source=PC\SQLEXPRESS;Initial Catalog=DOAN;Integrated Security=True";
-
+            connectionString = @"Data Source=MSI\HIENTHU;Initial Catalog=DOAN;Integrated Security=True";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +38,14 @@ namespace GiaoDien
         private void Form13_Load(object sender, EventArgs e)
         {
         
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form11 f=new Form11();
+            f.id_doitac = id_doitac;
+            f.Show();
+            this.Close();
         }
     }
 }

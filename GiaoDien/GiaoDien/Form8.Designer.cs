@@ -38,16 +38,11 @@ namespace GiaoDien
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dOITACBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tenQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanhPhoQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongChiNhanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDienThoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbTimKiem = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,51 +92,13 @@ namespace GiaoDien
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tenQuanDataGridViewTextBoxColumn,
-            this.thanhPhoQuanDataGridViewTextBoxColumn,
-            this.soLuongChiNhanhDataGridViewTextBoxColumn,
-            this.soDienThoaiDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dOITACBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(127, 190);
+            this.dataGridView1.Location = new System.Drawing.Point(86, 190);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(859, 306);
+            this.dataGridView1.Size = new System.Drawing.Size(900, 306);
             this.dataGridView1.TabIndex = 6;
-           
-            // 
-            // tenQuanDataGridViewTextBoxColumn
-            // 
-            this.tenQuanDataGridViewTextBoxColumn.DataPropertyName = "Ten quan";
-            this.tenQuanDataGridViewTextBoxColumn.HeaderText = "Ten quan";
-            this.tenQuanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.tenQuanDataGridViewTextBoxColumn.Name = "tenQuanDataGridViewTextBoxColumn";
-            this.tenQuanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // thanhPhoQuanDataGridViewTextBoxColumn
-            // 
-            this.thanhPhoQuanDataGridViewTextBoxColumn.DataPropertyName = "Thanh pho/Quan";
-            this.thanhPhoQuanDataGridViewTextBoxColumn.HeaderText = "Thanh pho/Quan";
-            this.thanhPhoQuanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.thanhPhoQuanDataGridViewTextBoxColumn.Name = "thanhPhoQuanDataGridViewTextBoxColumn";
-            this.thanhPhoQuanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // soLuongChiNhanhDataGridViewTextBoxColumn
-            // 
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.DataPropertyName = "So luong chi nhanh";
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.HeaderText = "So luong chi nhanh";
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.Name = "soLuongChiNhanhDataGridViewTextBoxColumn";
-            this.soLuongChiNhanhDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // soDienThoaiDataGridViewTextBoxColumn
-            // 
-            this.soDienThoaiDataGridViewTextBoxColumn.DataPropertyName = "So dien thoai";
-            this.soDienThoaiDataGridViewTextBoxColumn.HeaderText = "So dien thoai";
-            this.soDienThoaiDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.soDienThoaiDataGridViewTextBoxColumn.Name = "soDienThoaiDataGridViewTextBoxColumn";
-            this.soDienThoaiDataGridViewTextBoxColumn.Width = 150;
             // 
             // label2
             // 
@@ -191,7 +148,6 @@ namespace GiaoDien
             this.Load += new System.EventHandler(this.Form8_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.dOITACBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
