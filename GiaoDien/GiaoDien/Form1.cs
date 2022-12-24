@@ -108,7 +108,9 @@ namespace GiaoDien
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-
+            Form1_1 form1_1 = new Form1_1();
+            form1_1.ShowDialog();
+            this.Close();
         }
 
         private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
